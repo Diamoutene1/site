@@ -1,14 +1,27 @@
 body {
-    background: #0c1022;
+    background: url('../image/image1.jpg') no-repeat center center fixed;
+    background-size: cover; /* S'assurer que l'image couvre tout l'écran */
     margin: 0;
     padding: 0;
     height: 100%;
+    position: relative;
+    color: #fff;
 }
 
-nav {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 16, 34, 0.7); /* Overlay sombre pour améliorer la lisibilité */
+    z-index: 1;
+}
+
+nav, .container, footer {
+    position: relative;
+    z-index: 2;
 }
 
 .logo {
@@ -81,6 +94,7 @@ nav {
     margin-top: 20px;
     transition: 0.5s;
 }
+
 .btn1 {
     color: #fff;
     background: linear-gradient(rgb(128, 0, 0), #f605fe);
@@ -94,6 +108,7 @@ nav {
 .btn:hover {
     letter-spacing: 3px;
 }
+
 .btn1:hover {
     letter-spacing: 3px;
 }
@@ -127,3 +142,4 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
