@@ -1,0 +1,89 @@
+/* Définition de la police principale */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background: url('../image/image2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    line-height: 1.6;
+}
+
+/* Style pour la navigation */
+nav {
+    background: rgba(0, 0, 0, 0.8); /* Menu semi-transparent */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée */
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav .navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav .navbar ul li a:hover,
+nav .navbar ul li a.active {
+    background: #ff7b54; /* Couleur de survol et active */
+    color: #ffffff;
+}
+
+/* Container principal */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.9); /* Fond plus sombre pour le texte */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    margin-top: 70px;
+}
+
+.container h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #ff7b54;
+    text-align: center;
+}
+
+.container p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Style pour le footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Footer semi-transparent */
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
