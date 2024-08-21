@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="css/style_page4.css">
+    <title>Contact - Diamoutene Zana</title>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">Port<span>folio</span></a>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="appropos.html">À propos</a></li>
+                <li><a href="projet.html">Projets</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Contactez-moi</h1>
+        
+        <!-- Informations de contact -->
+        <div class="contact-info">
+            <h2>Mes coordonnées</h2>
+            <p><strong>Email:</strong> <a href="mailto:tidianediamoutene100@gmail.com">tidianediamoutene100@gmail.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/diamoutene-zana" target="_blank">Mon LinkedIn</a></p>
+            <p><strong>Téléphone:</strong> +33 6 12 34 56 78</p>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div class="form-container">
+            <h2>Envoyer un message</h2>
+            <form id="contactForm" name="contact" method="POST" action="https://formspree.io/f/xldrpbak">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">E-mail :</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 - Diamoutene Zana - Portfolio</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/contact.js"></script>
+</body>
+</html>
