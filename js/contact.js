@@ -18,3 +18,4 @@ contactLinks.forEach(link => {
         window.location.href = link.href; // Redirige après le message d'alerte
     });
 });
+
