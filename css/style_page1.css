@@ -15,7 +15,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(12, 16, 34, 0.7); /* Overlay sombre pour améliorer la lisibilité */
+    background: rgba(0, 0, 0, 0.7); /* Overlay sombre pour améliorer la lisibilité */
     z-index: 1;
 }
 
@@ -24,17 +24,20 @@ nav, .container, footer {
     z-index: 2;
 }
 
+/* Logo et Navigation */
 .logo {
     font-size: 2em;
     color: #fff;
     text-decoration: none;
     font-weight: 700;
+    animation: glow 1.5s infinite alternate;
 }
 
 .logo span {
-    color: #fe05e9;
+    color: #ffa500; /* Couleur d'accentuation pour le texte "folio" */
 }
 
+/* Navbar */
 .navbar {
     flex: 1;
     text-align: right;
@@ -50,17 +53,18 @@ nav, .container, footer {
     text-decoration: none;
     color: #fff;
     padding: 8px 12px;
-    transition: 0.5s;
+    transition: color 0.5s;
 }
 
 .navbar a:hover {
-    color: #fe05e9;
+    color: #ffa500; /* Couleur d'accentuation */
 }
 
 .navbar .active {
-    color: #fe05e9;
+    color: #ffa500; /* Couleur d'accentuation pour l'élément actif */
 }
 
+/* Container principal */
 .container {
     display: flex;
     justify-content: space-between;
@@ -78,7 +82,7 @@ nav, .container, footer {
 }
 
 .text span {
-    color: #fe05e9;
+    color: #ffa500; /* Couleur d'accentuation */
 }
 
 .text p {
@@ -87,32 +91,20 @@ nav, .container, footer {
 
 .btn {
     color: #fff;
-    background: linear-gradient(green, #fe05e9);
+    background: #ffa500; /* Bouton avec couleur d'accentuation */
     text-decoration: none;
     padding: 15px 45px;
     display: inline-block;
     margin-top: 20px;
-    transition: 0.5s;
-}
-
-.btn1 {
-    color: #fff;
-    background: linear-gradient(rgb(128, 0, 0), #f605fe);
-    text-decoration: none;
-    padding: 15px 45px;
-    display: inline-block;
-    margin-top: 20px;
-    transition: 0.5s;
+    transition: background-color 0.5s;
 }
 
 .btn:hover {
-    letter-spacing: 3px;
+    background: #ff8c00; /* Changement de couleur au survol */
+    letter-spacing: 2px;
 }
 
-.btn1:hover {
-    letter-spacing: 3px;
-}
-
+/* Image de présentation */
 .image-container {
     margin-left: 20px; /* Espace à gauche de l'image */
 }
@@ -120,7 +112,7 @@ nav, .container, footer {
 .cercle {
     width: 200px;
     height: 200px;
-    background: #fe05e9;
+    background: #ffa500; /* Cercle avec couleur d'accentuation */
     border-radius: 50%;
     overflow: hidden;
 }
@@ -132,6 +124,7 @@ nav, .container, footer {
     object-fit: cover;
 }
 
+/* Footer */
 footer {
     position: fixed;
     left: 0;
@@ -141,5 +134,15 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
+}
+
+/* Animation pour le logo */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ffa500, 0 0 20px #ffa500;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ffa500, 0 0 30px #ffa500;
+    }
 }
 
