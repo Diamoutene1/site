@@ -111,6 +111,20 @@ nav .navbar ul li a.active {
     animation: fadeIn 1.5s ease-in; /* Animation d'apparition pour les éléments de la liste */
 }
 
+/* Style pour les vidéos */
+.video-placeholder {
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1.5s ease-out; /* Animation de montée pour les vidéos */
+}
+
+video {
+    width: 100%;
+    border-radius: 12px;
+}
+
 /* Style pour le footer */
 footer {
     text-align: center;
@@ -212,3 +226,4 @@ footer p {
         background-position: 100% 50%;
     }
 }
+
