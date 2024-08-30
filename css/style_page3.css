@@ -81,43 +81,52 @@ nav .navbar ul li a.active {
     animation: zoomIn 1.5s ease-out; /* Animation de zoom pour le titre */
 }
 
-.project {
-    margin-bottom: 40px;
+/* Grille de projets */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Élément individuel de projet */
+.project-item {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
     animation: fadeInUp 1.5s ease-out; /* Animation de montée pour chaque projet */
 }
 
-.project h2 {
-    font-size: 32px;
+.project-item h2 {
+    font-size: 28px;
     margin-bottom: 15px;
     color: #ff6f61;
     text-align: center;
     animation: slideInLeft 1.5s ease-out; /* Animation de glissement depuis la gauche pour les titres de projet */
 }
 
-.project p {
-    font-size: 20px;
+.project-item p {
+    font-size: 18px;
     margin-bottom: 15px;
     text-align: left;
     animation: slideInRight 1.5s ease-out; /* Animation de glissement depuis la droite pour les paragraphes */
 }
 
-.project ul {
+.project-item ul {
     list-style-type: circle;
     margin-left: 20px;
 }
 
-.project ul li {
-    font-size: 20px;
+.project-item ul li {
+    font-size: 18px;
     animation: fadeIn 1.5s ease-in; /* Animation d'apparition pour les éléments de la liste */
 }
 
 /* Style pour les vidéos */
-.video-placeholder {
-    margin: 20px auto;
-    max-width: 100%;
+.video-wrapper {
+    margin: 15px 0;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    animation: fadeInUp 1.5s ease-out; /* Animation de montée pour les vidéos */
 }
 
 video {
@@ -126,16 +135,18 @@ video {
 }
 
 /* Style pour le footer */
+/* Style pour le footer */
 footer {
     text-align: center;
     padding: 20px;
     background: rgba(0, 0, 0, 0.9); /* Couleur sombre pour le footer */
     color: #f8f8f8;
-    position: fixed;
+    position: relative; /* Position relative pour qu'il apparaisse au bas du contenu */
     width: 100%;
-    bottom: 0;
-    animation: fadeIn 3s ease-in; /* Animation d'apparition pour le footer */
+    margin-top: 40px; /* Espace au-dessus du footer pour éviter qu'il ne se chevauche avec le contenu */
+    clear: both; /* Assure que le footer est en dessous de tous les éléments flottants */
 }
+
 
 footer p {
     margin: 0;

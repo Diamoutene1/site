@@ -81,8 +81,10 @@ nav .navbar ul li a.active {
     animation: textFocusIn 1.5s ease-out; /* Mise en avant du texte par un effet de focus */
 }
 
+/* Informations de contact */
 .contact-info {
     font-size: 20px;
+    margin-bottom: 30px;
 }
 
 .contact-info p {
@@ -101,44 +103,47 @@ nav .navbar ul li a.active {
     animation: underlineGrow 0.3s ease-in-out; /* Animation d'agrandissement du soulignement au survol */
 }
 
-/* Style pour le formulaire */
+/* Style pour le formulaire de contact */
 .form-container {
-    margin-top: 20px;
+    font-size: 20px;
 }
 
-form {
+.form-container form {
     display: flex;
     flex-direction: column;
 }
 
-label {
-    margin: 10px 0 5px;
+.form-container label {
+    margin-top: 15px;
+    font-weight: bold;
 }
 
-input, textarea {
+.form-container input,
+.form-container textarea {
+    margin-top: 5px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
-    margin-bottom: 15px;
 }
 
-button {
-    padding: 10px 15px;
+.form-container button {
+    margin-top: 15px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     background-color: #4caf50;
-    color: #fff;
+    color: white;
+    font-size: 18px;
     cursor: pointer;
-    font-size: 16px;
 }
 
-button:hover {
+.form-container button:hover {
     background-color: #45a049;
 }
 
 /* Style pour le footer */
 footer {
-    text-align: center;
+    text-align: relative;
     padding: 20px;
     background: #ffffff; /* Couleur sombre pour contraster avec le fond de page */
     color: #333333;
