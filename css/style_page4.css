@@ -147,7 +147,7 @@ footer {
     padding: 20px;
     background: #ffffff; /* Couleur sombre pour contraster avec le fond de page */
     color: #333333;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
     animation: footerFadeIn 2s ease-in; /* Apparition progressive du footer */
