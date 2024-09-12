@@ -1,5 +1,5 @@
 // Effet de zoom sur les projets
-const projects = document.querySelectorAll('.project');
+const projects = document.querySelectorAll('.project-item');
 
 projects.forEach(project => {
     project.addEventListener('mouseover', () => {

@@ -7,6 +7,7 @@ body {
     background: url('../image/image2.jpg') no-repeat center center fixed;
     background-size: cover;
     line-height: 1.6;
+    overflow-x: hidden; /* Empêcher le débordement horizontal */
 }
 
 /* Style pour la navigation */
@@ -16,6 +17,10 @@ nav {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée */
     animation: slideDown 1s ease-out; /* Animation de la navigation */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 nav .logo {
@@ -24,6 +29,10 @@ nav .logo {
     font-weight: bold;
     text-decoration: none;
     animation: fadeIn 2s ease-in; /* Animation du logo */
+}
+
+nav .logo span {
+    color: #ffa500; /* Couleur d'accentuation pour le texte "folio" */
 }
 
 nav .navbar ul {
@@ -61,7 +70,7 @@ nav .navbar ul li a.active {
     background: rgba(0, 0, 0, 0.9); /* Fond plus sombre pour le texte */
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    margin-top: 70px;
+    margin-top: 80px; /* Ajuster le margin-top pour laisser de l'espace pour la navigation fixe */
     animation: fadeInUp 1.5s ease-out; /* Animation du container */
 }
 
@@ -82,7 +91,7 @@ nav .navbar ul li a.active {
 
 /* Style pour le footer */
 footer {
-    text-align: relative;
+    text-align: center;
     padding: 20px;
     background: rgba(0, 0, 0, 0.8); /* Footer semi-transparent */
     color: #ffffff;
@@ -90,10 +99,6 @@ footer {
     width: 100%;
     bottom: 0;
     animation: fadeIn 3s ease-in; /* Animation du footer */
-}
-
-footer p {
-    margin: 0;
 }
 
 /* Définition des animations */
@@ -127,4 +132,3 @@ footer p {
         opacity: 1;
     }
 }
-

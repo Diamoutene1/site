@@ -7,7 +7,43 @@ body {
     background: url('../image/image3.jpg') no-repeat center center fixed;
     background-size: cover;
     line-height: 1.6;
-    animation: backgroundPan 20s infinite linear; /* Animation de déplacement du fond */
+    animation: backgroundPan 30s infinite linear, backgroundFade 20s infinite alternate ease-in-out;
+}
+
+/* Animation de défilement de l'image de fond */
+@keyframes backgroundPan {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Animation de fondu et de changement de couleur */
+@keyframes backgroundFade {
+    0% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Animation de zoom de l'image de fond */
+@keyframes backgroundZoom {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 100%;
+    }
 }
 
 /* Style pour la navigation */
@@ -63,7 +99,7 @@ nav .navbar ul li a.active {
 
 /* Style pour le conteneur des projets */
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
     padding: 30px;
     background: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent pour le contraste */
@@ -79,6 +115,21 @@ nav .navbar ul li a.active {
     color: #333333;
     text-align: center;
     animation: zoomIn 1.5s ease-out; /* Animation de zoom pour le titre */
+}
+
+/* Section des projets */
+.project-section {
+    margin-bottom: 40px;
+}
+
+.project-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #004d40;
+    border-bottom: 2px solid #004d40;
+    padding-bottom: 10px;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 /* Grille de projets */
@@ -97,8 +148,8 @@ nav .navbar ul li a.active {
     animation: fadeInUp 1.5s ease-out; /* Animation de montée pour chaque projet */
 }
 
-.project-item h2 {
-    font-size: 28px;
+.project-item h3 {
+    font-size: 24px;
     margin-bottom: 15px;
     color: #ff6f61;
     text-align: center;
@@ -135,7 +186,6 @@ video {
 }
 
 /* Style pour le footer */
-/* Style pour le footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -146,7 +196,6 @@ footer {
     margin-top: 40px; /* Espace au-dessus du footer pour éviter qu'il ne se chevauche avec le contenu */
     clear: both; /* Assure que le footer est en dessous de tous les éléments flottants */
 }
-
 
 footer p {
     margin: 0;
@@ -230,11 +279,34 @@ footer p {
 }
 
 @keyframes backgroundPan {
-    from {
-        background-position: 0% 50%;
+    0% {
+        background-position: 0% 0%;
     }
-    to {
-        background-position: 100% 50%;
+    100% {
+        background-position: 100% 100%;
     }
 }
 
+@keyframes backgroundFade {
+    0% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes backgroundZoom {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}

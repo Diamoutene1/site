@@ -6,6 +6,7 @@ body {
     height: 100%;
     position: relative;
     color: #fff;
+    font-family: 'Arial', sans-serif; /* Police plus moderne */
 }
 
 body::before {
@@ -38,15 +39,22 @@ nav, .container, footer {
 }
 
 /* Navbar */
-.navbar {
-    flex: 1;
-    text-align: right;
+nav {
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour la navbar */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre portée pour la navbar */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navbar ul li {
-    position: relative;
-    padding: 8px 12px;
-    display: inline-block;
+    margin: 0 15px;
 }
 
 .navbar a {
@@ -54,6 +62,7 @@ nav, .container, footer {
     color: #fff;
     padding: 8px 12px;
     transition: color 0.5s;
+    font-size: 18px; /* Taille de police plus petite pour la navbar */
 }
 
 .navbar a:hover {
@@ -70,15 +79,18 @@ nav, .container, footer {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    min-height: 80vh; /* Hauteur minimale pour le container */
 }
 
+/* Texte */
 .text {
-    max-width: calc(50% - 20px); /* Moitié de la largeur de la page moins les marges */
+    max-width: 50%;
     color: #fff;
 }
 
 .text h1 {
-    font-size: 55px;
+    font-size: 3em; /* Ajustement de la taille pour un meilleur rendu */
+    margin: 0;
 }
 
 .text span {
@@ -86,27 +98,30 @@ nav, .container, footer {
 }
 
 .text p {
-    margin: 10px 0 20px;
+    margin: 20px 0;
+    line-height: 1.6;
 }
 
 .btn {
     color: #fff;
     background: #ffa500; /* Bouton avec couleur d'accentuation */
     text-decoration: none;
-    padding: 15px 45px;
+    padding: 15px 30px;
     display: inline-block;
     margin-top: 20px;
-    transition: background-color 0.5s;
+    border-radius: 5px; /* Coins arrondis pour le bouton */
+    transition: background-color 0.3s, transform 0.3s; /* Animation au survol */
 }
 
 .btn:hover {
     background: #ff8c00; /* Changement de couleur au survol */
     letter-spacing: 2px;
+    transform: scale(1.05); /* Légère agrandissement au survol */
 }
 
 /* Image de présentation */
 .image-container {
-    margin-left: 20px; /* Espace à gauche de l'image */
+    margin-left: 20px;
 }
 
 .cercle {
@@ -115,6 +130,7 @@ nav, .container, footer {
     background: #ffa500; /* Cercle avec couleur d'accentuation */
     border-radius: 50%;
     overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Ombre portée pour l'image */
 }
 
 .cercle img {
@@ -126,14 +142,13 @@ nav, .container, footer {
 
 /* Footer */
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 /* Animation pour le logo */
@@ -145,4 +160,3 @@ footer {
         text-shadow: 0 0 10px #fff, 0 0 20px #ffa500, 0 0 30px #ffa500;
     }
 }
-
