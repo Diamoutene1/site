@@ -200,6 +200,24 @@ footer {
 footer p {
     margin: 0;
 }
+/* Style pour le lien vers le projet */
+.project-link {
+    color: #00796b; /* Couleur verte similaire à la barre de navigation */
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 2px solid #00796b;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #00796b; /* Fond vert survolé */
+    color: #ffffff; /* Texte blanc au survol */
+}
+
 
 /* Définition des animations */
 @keyframes slideInDown {
