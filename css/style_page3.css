@@ -296,41 +296,14 @@ footer p {
     }
 }
 
-@keyframes backgroundPan {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
-}
-
-@keyframes backgroundFade {
-    0% {
-        background-color: rgba(255, 255, 255, 0.5);
-    }
-    50% {
-        background-color: rgba(255, 255, 255, 0.8);
-    }
-    100% {
-        background-color: rgba(255, 255, 255, 0.5);
-    }
-}
-
-@keyframes backgroundZoom {
-    0% {
-        background-size: 100%;
-    }
-    50% {
-        background-size: 110%;
-    }
-    100% {
-        background-size: 100%;
-    }
-}
-
 /* Adaptations pour les écrans de smartphones */
 @media (max-width: 768px) {
+    nav .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     nav .navbar ul {
         flex-direction: column;
     }
