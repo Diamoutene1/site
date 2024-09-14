@@ -200,6 +200,7 @@ footer {
 footer p {
     margin: 0;
 }
+
 /* Style pour le lien vers le projet */
 .project-link {
     color: #00796b; /* Couleur verte similaire à la barre de navigation */
@@ -217,7 +218,6 @@ footer p {
     background-color: #00796b; /* Fond vert survolé */
     color: #ffffff; /* Texte blanc au survol */
 }
-
 
 /* Définition des animations */
 @keyframes slideInDown {
@@ -326,5 +326,60 @@ footer p {
     }
     100% {
         background-size: 100%;
+    }
+}
+
+/* Adaptations pour les écrans de smartphones */
+@media (max-width: 768px) {
+    nav .navbar ul {
+        flex-direction: column;
+    }
+
+    nav .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 15px;
+        margin-top: 60px; /* Moins d'espace pour les petits écrans */
+    }
+
+    .container h1 {
+        font-size: 28px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+    }
+
+    .project-item h3 {
+        font-size: 20px;
+    }
+
+    .project-item p {
+        font-size: 16px;
+    }
+
+    .project-item ul li {
+        font-size: 16px;
+    }
+
+    video {
+        width: 100%;
+        height: auto; /* Assurer la proportionnalité des vidéos */
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .project-link {
+        font-size: 16px;
+        padding: 8px 16px;
+        border-width: 1px;
     }
 }
