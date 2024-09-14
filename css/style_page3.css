@@ -200,6 +200,7 @@ footer {
 footer p {
     margin: 0;
 }
+
 /* Style pour le lien vers le projet */
 .project-link {
     color: #00796b; /* Couleur verte similaire à la barre de navigation */
@@ -217,7 +218,6 @@ footer p {
     background-color: #00796b; /* Fond vert survolé */
     color: #ffffff; /* Texte blanc au survol */
 }
-
 
 /* Définition des animations */
 @keyframes slideInDown {
