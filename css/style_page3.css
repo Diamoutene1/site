@@ -33,38 +33,10 @@ body {
     }
 }
 
-/* Animation de zoom de l'image de fond */
-@keyframes backgroundZoom {
-    0% {
-        background-size: 100%;
-    }
-    50% {
-        background-size: 110%;
-    }
-    100% {
-        background-size: 100%;
-    }
-}
 /* Style pour le lien vers le projet */
-.project-link {
-    color: #00796b; /* Couleur verte similaire à la barre de navigation */
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    border: 2px solid #00796b;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.project-link:hover {
-    background-color: #00796b; /* Fond vert survolé */
-    color: #ffffff; /* Texte blanc au survol */
-}
-/* Style pour le lien vers le projet */
+.project-link,
 .project-link1 {
-    color: #00796b; /* Couleur verte similaire à la barre de navigation */
+    color: #00796b;
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
@@ -75,22 +47,22 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+.project-link:hover,
 .project-link1:hover {
-    background-color: #00796b; /* Fond vert survolé */
-    color: #ffffff; /* Texte blanc au survol */
+    background-color: #00796b;
+    color: #ffffff;
 }
-
 
 /* Style pour la navigation */
 nav {
-    background: #004d40; /* Couleur de fond sombre et élégante */
+    background: #004d40;
     padding: 15px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    animation: slideInDown 1s ease-out; /* Animation de glissement pour la navigation */
+    animation: slideInDown 1s ease-out;
 }
 
 nav .logo {
@@ -99,7 +71,7 @@ nav .logo {
     font-weight: bold;
     text-decoration: none;
     padding-left: 20px;
-    animation: fadeIn 2s ease-in; /* Animation d'apparition pour le logo */
+    animation: fadeIn 2s ease-in;
 }
 
 nav .navbar ul {
@@ -108,12 +80,12 @@ nav .navbar ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    animation: fadeIn 1.5s ease-in; /* Animation d'apparition pour les liens de la navbar */
+    animation: fadeIn 1.5s ease-in;
 }
 
 nav .navbar ul li {
     margin: 0 20px;
-    animation: bounceIn 1.5s ease-in-out; /* Animation de rebond pour les éléments de la navbar */
+    animation: bounceIn 1.5s ease-in-out;
 }
 
 nav .navbar ul li a {
@@ -128,7 +100,7 @@ nav .navbar ul li a {
 
 nav .navbar ul li a:hover,
 nav .navbar ul li a.active {
-    background: #00796b; /* Couleur de survol avec effet de fond */
+    background: #00796b;
     color: #ffffff;
 }
 
@@ -137,11 +109,11 @@ nav .navbar ul li a.active {
     max-width: 1200px;
     margin: auto;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent pour le contraste */
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    margin-top: 80px; /* Espace pour la barre de navigation fixe */
-    animation: fadeInUp 2s ease-out; /* Animation de montée pour le conteneur */
+    margin-top: 80px;
+    animation: fadeInUp 2s ease-out;
 }
 
 .container h1 {
@@ -149,7 +121,7 @@ nav .navbar ul li a.active {
     margin-bottom: 20px;
     color: #333333;
     text-align: center;
-    animation: zoomIn 1.5s ease-out; /* Animation de zoom pour le titre */
+    animation: zoomIn 1.5s ease-out;
 }
 
 /* Section des projets */
@@ -180,7 +152,7 @@ nav .navbar ul li a.active {
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    animation: fadeInUp 1.5s ease-out; /* Animation de montée pour chaque projet */
+    animation: fadeInUp 1.5s ease-out;
 }
 
 .project-item h3 {
@@ -188,14 +160,14 @@ nav .navbar ul li a.active {
     margin-bottom: 15px;
     color: #ff6f61;
     text-align: center;
-    animation: slideInLeft 1.5s ease-out; /* Animation de glissement depuis la gauche pour les titres de projet */
+    animation: slideInLeft 1.5s ease-out;
 }
 
 .project-item p {
     font-size: 18px;
     margin-bottom: 15px;
     text-align: left;
-    animation: slideInRight 1.5s ease-out; /* Animation de glissement depuis la droite pour les paragraphes */
+    animation: slideInRight 1.5s ease-out;
 }
 
 .project-item ul {
@@ -205,7 +177,7 @@ nav .navbar ul li a.active {
 
 .project-item ul li {
     font-size: 18px;
-    animation: fadeIn 1.5s ease-in; /* Animation d'apparition pour les éléments de la liste */
+    animation: fadeIn 1.5s ease-in;
 }
 
 /* Style pour les vidéos */
@@ -224,12 +196,12 @@ video {
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.9); /* Couleur sombre pour le footer */
+    background: rgba(0, 0, 0, 0.9);
     color: #f8f8f8;
-    position: relative; /* Position relative pour qu'il apparaisse au bas du contenu */
+    position: relative;
     width: 100%;
-    margin-top: 40px; /* Espace au-dessus du footer pour éviter qu'il ne se chevauche avec le contenu */
-    clear: both; /* Assure que le footer est en dessous de tous les éléments flottants */
+    margin-top: 40px;
+    clear: both;
 }
 
 footer p {
@@ -312,38 +284,3 @@ footer p {
         opacity: 1;
     }
 }
-
-@keyframes backgroundPan {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
-}
-
-@keyframes backgroundFade {
-    0% {
-        background-color: rgba(255, 255, 255, 0.5);
-    }
-    50% {
-        background-color: rgba(255, 255, 255, 0.8);
-    }
-    100% {
-        background-color: rgba(255, 255, 255, 0.5);
-    }
-}
-
-@keyframes backgroundZoom {
-    0% {
-        background-size: 100%;
-    }
-    50% {
-        background-size: 110%;
-    }
-    100% {
-        background-size: 100%;
-    }
-}
-
-    
