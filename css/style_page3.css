@@ -219,6 +219,71 @@ footer p {
     color: #ffffff; /* Texte blanc au survol */
 }
 
+/* Media Queries pour le responsive design */
+
+/* Pour les écrans de moins de 768px (tablettes et téléphones) */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin-top: 60px; /* Ajustez en fonction de la hauteur de la navigation */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Une colonne pour les petits écrans */
+    }
+
+    nav .navbar ul {
+        flex-direction: column; /* Empile les éléments de navigation */
+    }
+
+    nav .navbar ul li {
+        margin: 10px 0; /* Espacement vertical */
+    }
+
+    nav .logo {
+        font-size: 24px; /* Réduit la taille du logo */
+    }
+
+    .container h1 {
+        font-size: 30px; /* Ajuste la taille du titre */
+    }
+
+    .project-item {
+        padding: 15px; /* Réduit l'espace interne */
+    }
+
+    .video-wrapper {
+        margin: 10px 0; /* Ajuste les marges */
+    }
+
+    footer {
+        padding: 15px; /* Ajuste le padding du footer */
+    }
+}
+
+/* Pour les écrans de moins de 480px (téléphones très petits) */
+@media (max-width: 480px) {
+    nav .logo {
+        font-size: 20px; /* Réduit encore plus la taille du logo */
+    }
+
+    nav .navbar ul li a {
+        font-size: 16px; /* Réduit la taille des liens */
+    }
+
+    .container h1 {
+        font-size: 24px; /* Réduit encore plus la taille du titre */
+    }
+
+    .project-item h3 {
+        font-size: 20px; /* Réduit la taille des titres de projets */
+    }
+
+    .project-item p {
+        font-size: 16px; /* Réduit la taille des paragraphes */
+    }
+}
+
 /* Définition des animations */
 @keyframes slideInDown {
     from {
@@ -240,26 +305,41 @@ footer p {
     }
 }
 
-@keyframes fadeInUp {
+@keyframes bounceIn {
     from {
-        transform: translateY(30px);
+        transform: scale(0.3);
         opacity: 0;
     }
-    to {
-        transform: translateY(0);
+    50% {
         opacity: 1;
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
-@keyframes bounceIn {
-    0%, 20%, 50%, 80%, 100% {
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
         transform: translateY(0);
     }
-    40% {
-        transform: translateY(-20px);
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
     }
-    60% {
-        transform: translateY(-10px);
+    to {
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
@@ -282,77 +362,5 @@ footer p {
     to {
         transform: translateX(0);
         opacity: 1;
-    }
-}
-
-@keyframes zoomIn {
-    from {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* Adaptations pour les écrans de smartphones */
-@media (max-width: 768px) {
-    nav .navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav .navbar ul {
-        flex-direction: column;
-    }
-
-    nav .navbar ul li {
-        margin: 10px 0;
-    }
-
-    .container {
-        padding: 15px;
-        margin-top: 60px; /* Moins d'espace pour les petits écrans */
-    }
-
-    .container h1 {
-        font-size: 28px;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
-    }
-
-    .project-item h3 {
-        font-size: 20px;
-    }
-
-    .project-item p {
-        font-size: 16px;
-    }
-
-    .project-item ul li {
-        font-size: 16px;
-    }
-
-    video {
-        width: 100%;
-        height: auto; /* Assurer la proportionnalité des vidéos */
-    }
-
-    footer {
-        padding: 10px;
-    }
-
-    footer p {
-        font-size: 14px;
-    }
-
-    .project-link {
-        font-size: 16px;
-        padding: 8px 16px;
-        border-width: 1px;
     }
 }
