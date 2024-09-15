@@ -1,65 +1,83 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style_page3.css">
     <title>Projets - Diamoutene Zana</title>
 </head>
 <body>
-<nav>
-    <a href="index.html" class="logo">Port<span>folio</span></a>
-    <div class="navbar">
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="appropos.html">À propos</a></li>
-            <li><a href="projet.html" class="active">Projets</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</nav>
 
-<div class="container">
-    <h1>Mes Projets</h1>
-
-    <!-- Section des projets de Licence 1 -->
-    <section class="project-section">
-        <h2>Projets de Licence 1</h2>
-        <div class="project-grid">
-            <!-- Projet Création de Jeux en Python -->
-            <div class="project-item">
-                <h3>Création de Jeux en Python</h3>
-                <p>Développement de jeux classiques en utilisant Python et Tkinter :</p>
-                <ul>
-                    <li>Le Jeu de la Vie</li>
-                    <li>Le Jeu du Serpent</li>
-                </ul>
-                <a href="https://diamoutene1.github.io/jeu-python/" class="project-link" target="_blank">Voir les jeux en ligne</a>
-            </div>
-
-            <!-- Projet JavaScript Asynchrone et Cartographie -->
-            <div class="project-item">
-                <h3>JavaScript Asynchrone et Cartographie</h3>
-                <p>Affichage de la localisation d'une image sur une carte avec API Flickr.</p>
-                <a href="https://diamoutene1.github.io/projetflickr/" class="project-link" target="_blank">Voir le projet en ligne</a>
-            </div>
-        </div> <!-- Fin de la grille des projets de Licence 1 -->
-    </section>
-
-    <!-- Section du projet de Baccalauréat -->
-    <section class="project-section">
-        <h2>Projet de Baccalauréat</h2>
-        <div class="project-item">
-            <h3>Système d'Arrosage Automatique</h3>
-            <p>Système d'arrosage automatique contrôlé par SMS pendant le Baccalauréat en électronique.</p>
+    <nav>
+        <a href="index.html" class="logo">Port<span>folio</span></a>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="appropos.html">À propos</a></li>
+                <li><a href="projet.html" class="active">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
-    </section>
-</div> <!-- Fin du conteneur -->
+    </nav>
 
-<footer>
-    <p>© 2024 - Diamoutene Zana - Portfolio</p>
-</footer>
+    <div class="container">
+        <h1>Mes Projets</h1>
 
-<script src="js/projet.js"></script>
+        <section class="projects-section">
+            <h2>Projets de Licence 1</h2>
+            <div class="project-grid">
+                <!-- Projet de Licence 1 : Création de Jeux en Python -->
+                <div class="project-item">
+                    <h3>Création de Jeux en Python</h3>
+                    <p><strong>Description :</strong> Développement de jeux classiques en Python avec Tkinter :</p>
+                    <ul>
+                        <li><strong>Le Jeu de la Vie :</strong> Simule des phénomènes naturels complexes avec des règles simples.</li>
+                        <li><strong>Le Jeu du Serpent :</strong> Contrôlez un serpent grandissant sans heurter les bords ou lui-même.</li>
+                    </ul>
+                    <p><strong>Technologies utilisées :</strong> Python, Tkinter.</p>
+                    <div class="video-wrapper">
+                        <video controls>
+                            <source src="video_photo/jeu_de_la_vie.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la balise vidéo.
+                        </video>
+                    </div>
+                    <div class="video-wrapper">
+                        <video controls>
+                            <source src="video_photo/jeu_du_serpent.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la balise vidéo.
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Projet de Licence 1 : JavaScript Asynchrone et Cartographie -->
+                <div class="project-item">
+                    <h3>JavaScript Asynchrone et Cartographie</h3>
+                    <p><strong>Description :</strong> Affichage de la localisation d'une image sur une carte et ajout des images Flickr géolocalisées.</p>
+                    <p><strong>Technologies utilisées :</strong> JavaScript, API Flickr, API de cartographie.</p>
+                    <div class="video-wrapper">
+                        <video controls>
+                            <source src="video_photo/api_flickr.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la balise vidéo.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <h2>Projet de Baccalauréat</h2>
+            <div class="project-item">
+                <h3>Système d'Arrosage Automatique</h3>
+                <p><strong>Description :</strong> Conception d'un système d'arrosage automatique contrôlé par SMS avec un module GSM.</p>
+                <p><strong>Technologies utilisées :</strong> Microcontrôleur, Module GSM, Relais, Capteurs d'humidité du sol.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 - Diamoutene Zana - Portfolio</p>
+    </footer>
+
+    <!-- Insertion du script JavaScript -->
+    <script src="js/projet.js"></script>
+
 </body>
 </html>
