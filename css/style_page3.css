@@ -33,16 +33,29 @@ body {
     }
 }
 
+/* Animation de zoom de l'image de fond */
+@keyframes backgroundZoom {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
 /* Style pour la navigation */
 nav {
-    background: #004d40;
+    background: #004d40; /* Couleur de fond sombre et élégante */
     padding: 15px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre portée */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    animation: slideInDown 1s ease-out;
+    animation: slideInDown 1s ease-out; /* Animation de glissement pour la navigation */
 }
 
 nav .logo {
@@ -51,7 +64,7 @@ nav .logo {
     font-weight: bold;
     text-decoration: none;
     padding-left: 20px;
-    animation: fadeIn 2s ease-in;
+    animation: fadeIn 2s ease-in; /* Animation d'apparition pour le logo */
 }
 
 nav .navbar ul {
@@ -60,12 +73,12 @@ nav .navbar ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    animation: fadeIn 1.5s ease-in;
+    animation: fadeIn 1.5s ease-in; /* Animation d'apparition pour les liens de la navbar */
 }
 
 nav .navbar ul li {
     margin: 0 20px;
-    animation: bounceIn 1.5s ease-in-out;
+    animation: bounceIn 1.5s ease-in-out; /* Animation de rebond pour les éléments de la navbar */
 }
 
 nav .navbar ul li a {
@@ -80,7 +93,7 @@ nav .navbar ul li a {
 
 nav .navbar ul li a:hover,
 nav .navbar ul li a.active {
-    background: #00796b;
+    background: #00796b; /* Couleur de survol avec effet de fond */
     color: #ffffff;
 }
 
@@ -89,11 +102,11 @@ nav .navbar ul li a.active {
     max-width: 1200px;
     margin: auto;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent pour le contraste */
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    margin-top: 80px;
-    animation: fadeInUp 2s ease-out;
+    margin-top: 80px; /* Espace pour la barre de navigation fixe */
+    animation: fadeInUp 2s ease-out; /* Animation de montée pour le conteneur */
 }
 
 .container h1 {
@@ -101,7 +114,7 @@ nav .navbar ul li a.active {
     margin-bottom: 20px;
     color: #333333;
     text-align: center;
-    animation: zoomIn 1.5s ease-out;
+    animation: zoomIn 1.5s ease-out; /* Animation de zoom pour le titre */
 }
 
 /* Section des projets */
@@ -132,7 +145,7 @@ nav .navbar ul li a.active {
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    animation: fadeInUp 1.5s ease-out;
+    animation: fadeInUp 1.5s ease-out; /* Animation de montée pour chaque projet */
 }
 
 .project-item h3 {
@@ -140,14 +153,14 @@ nav .navbar ul li a.active {
     margin-bottom: 15px;
     color: #ff6f61;
     text-align: center;
-    animation: slideInLeft 1.5s ease-out;
+    animation: slideInLeft 1.5s ease-out; /* Animation de glissement depuis la gauche pour les titres de projet */
 }
 
 .project-item p {
     font-size: 18px;
     margin-bottom: 15px;
     text-align: left;
-    animation: slideInRight 1.5s ease-out;
+    animation: slideInRight 1.5s ease-out; /* Animation de glissement depuis la droite pour les paragraphes */
 }
 
 .project-item ul {
@@ -157,20 +170,7 @@ nav .navbar ul li a.active {
 
 .project-item ul li {
     font-size: 18px;
-    animation: fadeIn 1.5s ease-in;
-}
-
-/* Style pour les liens des projets */
-.project-item a {
-    color: #00796b;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.project-item a:hover {
-    color: #004d40;
-    text-decoration: underline;
+    animation: fadeIn 1.5s ease-in; /* Animation d'apparition pour les éléments de la liste */
 }
 
 /* Style pour les vidéos */
@@ -185,23 +185,41 @@ video {
     border-radius: 12px;
 }
 
+/* Style pour les liens des projets */
+.project-item a {
+    display: inline-block; /* Pour appliquer un style de bloc avec padding et border */
+    color: #00796b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; /* Ajoute du padding pour rendre le lien plus visible */
+    border: 2px solid #00796b; /* Encadre le lien */
+    border-radius: 8px; /* Arrondit les bords */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Effet de transition pour un rendu plus fluide */
+}
+
+.project-item a:hover {
+    background-color: #00796b; /* Change le fond au survol */
+    color: #ffffff; /* Change la couleur du texte au survol */
+    border-color: #004d40; /* Change la couleur de la bordure au survol */
+}
+
 /* Style pour le footer */
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.9); /* Couleur sombre pour le footer */
     color: #f8f8f8;
-    position: relative;
+    position: relative; /* Position relative pour qu'il apparaisse au bas du contenu */
     width: 100%;
-    margin-top: 40px;
-    clear: both;
+    margin-top: 40px; /* Espace au-dessus du footer pour éviter qu'il ne se chevauche avec le contenu */
+    clear: both; /* Assure que le footer est en dessous de tous les éléments flottants */
 }
 
 footer p {
     margin: 0;
 }
 
-/* Animations */
+/* Définition des animations */
 @keyframes slideInDown {
     from {
         transform: translateY(-100%);
@@ -275,5 +293,14 @@ footer p {
     to {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+@keyframes backgroundPan {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
     }
 }
