@@ -45,6 +45,24 @@ body {
         background-size: 100%;
     }
 }
+/* Style pour le lien vers le projet */
+.project-link {
+    color: #00796b; /* Couleur verte similaire à la barre de navigation */
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 2px solid #00796b;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #00796b; /* Fond vert survolé */
+    color: #ffffff; /* Texte blanc au survol */
+}
+
 
 /* Style pour la navigation */
 nav {
@@ -201,89 +219,6 @@ footer p {
     margin: 0;
 }
 
-/* Style pour le lien vers le projet */
-.project-link {
-    color: #00796b; /* Couleur verte similaire à la barre de navigation */
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    border: 2px solid #00796b;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.project-link:hover {
-    background-color: #00796b; /* Fond vert survolé */
-    color: #ffffff; /* Texte blanc au survol */
-}
-
-/* Media Queries pour le responsive design */
-
-/* Pour les écrans de moins de 768px (tablettes et téléphones) */
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-        margin-top: 60px; /* Ajustez en fonction de la hauteur de la navigation */
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr; /* Une colonne pour les petits écrans */
-    }
-
-    nav .navbar ul {
-        flex-direction: column; /* Empile les éléments de navigation */
-    }
-
-    nav .navbar ul li {
-        margin: 10px 0; /* Espacement vertical */
-    }
-
-    nav .logo {
-        font-size: 24px; /* Réduit la taille du logo */
-    }
-
-    .container h1 {
-        font-size: 30px; /* Ajuste la taille du titre */
-    }
-
-    .project-item {
-        padding: 15px; /* Réduit l'espace interne */
-    }
-
-    .video-wrapper {
-        margin: 10px 0; /* Ajuste les marges */
-    }
-
-    footer {
-        padding: 15px; /* Ajuste le padding du footer */
-    }
-}
-
-/* Pour les écrans de moins de 480px (téléphones très petits) */
-@media (max-width: 480px) {
-    nav .logo {
-        font-size: 20px; /* Réduit encore plus la taille du logo */
-    }
-
-    nav .navbar ul li a {
-        font-size: 16px; /* Réduit la taille des liens */
-    }
-
-    .container h1 {
-        font-size: 24px; /* Réduit encore plus la taille du titre */
-    }
-
-    .project-item h3 {
-        font-size: 20px; /* Réduit la taille des titres de projets */
-    }
-
-    .project-item p {
-        font-size: 16px; /* Réduit la taille des paragraphes */
-    }
-}
-
 /* Définition des animations */
 @keyframes slideInDown {
     from {
@@ -305,41 +240,26 @@ footer p {
     }
 }
 
-@keyframes bounceIn {
-    from {
-        transform: scale(0.3);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    70% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
 @keyframes fadeInUp {
     from {
+        transform: translateY(30px);
         opacity: 0;
-        transform: translateY(20px);
     }
     to {
-        opacity: 1;
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
-@keyframes zoomIn {
-    from {
-        transform: scale(0.9);
-        opacity: 0;
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
     }
-    to {
-        transform: scale(1);
-        opacity: 1;
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
     }
 }
 
@@ -364,3 +284,49 @@ footer p {
         opacity: 1;
     }
 }
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundPan {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes backgroundFade {
+    0% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes backgroundZoom {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+    
