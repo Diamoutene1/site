@@ -1,150 +1,312 @@
-/* Général */
+/* Définition de la police principale et des couleurs */
 body {
-    font-family: 'Arial', sans-serif;
-    color: #333;
+    font-family: 'Verdana', sans-serif;
+    color: #333333;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background: url('../image/image3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    line-height: 1.6;
+    animation: backgroundPan 30s infinite linear, backgroundFade 20s infinite alternate ease-in-out;
 }
 
-/* Navigation */
+/* Animation de défilement de l'image de fond */
+@keyframes backgroundPan {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Animation de fondu et de changement de couleur */
+@keyframes backgroundFade {
+    0% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Animation de zoom de l'image de fond */
+@keyframes backgroundZoom {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+/* Style pour la navigation */
 nav {
-    background-color: #004d40;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: #004d40; /* Couleur de fond sombre et élégante */
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    animation: slideInDown 1s ease-out; /* Animation de glissement pour la navigation */
 }
 
 nav .logo {
-    color: white;
-    font-size: 24px;
+    color: #ffffff;
+    font-size: 32px;
     font-weight: bold;
     text-decoration: none;
+    padding-left: 20px;
+    animation: fadeIn 2s ease-in; /* Animation d'apparition pour le logo */
 }
 
 nav .navbar ul {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
     display: flex;
+    justify-content: center;
+    animation: fadeIn 1.5s ease-in; /* Animation d'apparition pour les liens de la navbar */
 }
 
 nav .navbar ul li {
-    margin-left: 20px;
+    margin: 0 20px;
+    animation: bounceIn 1.5s ease-in-out; /* Animation de rebond pour les éléments de la navbar */
 }
 
 nav .navbar ul li a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
+    padding: 8px 16px;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
 }
 
 nav .navbar ul li a:hover,
 nav .navbar ul li a.active {
-    background-color: #00796b;
-    padding: 5px 10px;
-    border-radius: 5px;
+    background: #00796b; /* Couleur de survol avec effet de fond */
+    color: #ffffff;
 }
 
-/* Conteneur */
+/* Style pour le conteneur des projets */
 .container {
     max-width: 1200px;
-    margin: 80px auto;
-    padding: 0 20px;
+    margin: auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent pour le contraste */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    margin-top: 80px; /* Espace pour la barre de navigation fixe */
+    animation: fadeInUp 2s ease-out; /* Animation de montée pour le conteneur */
 }
 
-h1, h2 {
-    color: #004d40;
-    text-align: center;
-}
-
-h1 {
-    font-size: 2.5em;
+.container h1 {
+    font-size: 40px;
     margin-bottom: 20px;
+    color: #333333;
+    text-align: center;
+    animation: zoomIn 1.5s ease-out; /* Animation de zoom pour le titre */
 }
 
-h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-/* Projets */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
-    gap: 20px;
+/* Section des projets */
+.project-section {
     margin-bottom: 40px;
 }
 
+.project-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #004d40;
+    border-bottom: 2px solid #004d40;
+    padding-bottom: 10px;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Grille de projets */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Élément individuel de projet */
 .project-item {
-    background: white;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    animation: fadeInUp 1.5s ease-out; /* Animation de montée pour chaque projet */
 }
 
-.project-item:hover {
-    transform: translateY(-10px);
+.project-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ff6f61;
+    text-align: center;
+    animation: slideInLeft 1.5s ease-out; /* Animation de glissement depuis la gauche pour les titres de projet */
 }
 
-.project-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #00796b;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+.project-item p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: left;
+    animation: slideInRight 1.5s ease-out; /* Animation de glissement depuis la droite pour les paragraphes */
 }
 
-.project-link:hover {
-    background-color: #004d40;
+.project-item ul {
+    list-style-type: circle;
+    margin-left: 20px;
 }
 
-/* Footer */
+.project-item ul li {
+    font-size: 18px;
+    animation: fadeIn 1.5s ease-in; /* Animation d'apparition pour les éléments de la liste */
+}
+
+/* Style pour les vidéos */
+.video-wrapper {
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+video {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Style pour le footer */
 footer {
-    background-color: #004d40;
-    color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
-    font-size: 14px;
+    background: rgba(0, 0, 0, 0.9); /* Couleur sombre pour le footer */
+    color: #f8f8f8;
+    position: relative; /* Position relative pour qu'il apparaisse au bas du contenu */
+    width: 100%;
+    margin-top: 40px; /* Espace au-dessus du footer pour éviter qu'il ne se chevauche avec le contenu */
+    clear: both; /* Assure que le footer est en dessous de tous les éléments flottants */
 }
 
-/* Responsive - Ajout d'une flexibilité pour toutes tailles d'écrans */
-@media (max-width: 768px) {
-    nav .navbar ul {
-        flex-direction: column;
-        text-align: center;
-    }
+footer p {
+    margin: 0;
+}
 
-    nav .navbar ul li {
-        margin: 10px 0;
+/* Définition des animations */
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
     }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.5em;
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.75em;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-
-    h2 {
-        font-size: 1.25em;
+    to {
+        opacity: 1;
     }
+}
 
-    .project-link {
-        font-size: 14px;
-        padding: 8px 12px;
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundPan {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes backgroundFade {
+    0% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes backgroundZoom {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 100%;
     }
 }
