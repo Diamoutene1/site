@@ -135,7 +135,7 @@ nav .navbar ul li a.active {
 
 .project-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grille flexible */
     gap: 20px;
 }
 
@@ -199,33 +199,4 @@ footer {
 
 footer p {
     margin: 0;
-}
-
-/* Styles responsive */
-@media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .container h1 {
-        font-size: 24px;
-    }
-
-    .project-section h2 {
-        font-size: 24px;
-    }
-
-    .project-item h3 {
-        font-size: 20px;
-    }
-
-    .project-item p {
-        font-size: 16px;
-    }
-
-    .project-item ul li {
-        font-size: 16px;
-    }
 }
