@@ -88,7 +88,8 @@ nav .navbar ul li a.active {
 }
 
 .contact-info p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
     animation: fadeInText 2s ease-in; /* Apparition progressive du texte */
 }
 
@@ -101,6 +102,26 @@ nav .navbar ul li a.active {
 .contact-info a:hover {
     text-decoration: underline;
     animation: underlineGrow 0.3s ease-in-out; /* Animation d'agrandissement du soulignement au survol */
+}
+
+/* Style pour les images de contact (email et LinkedIn) */
+.contact-info img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%; /* Effet de cercle pour les images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+}
+
+.contact-info a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.contact-info img:hover {
+    transform: scale(1.1); /* Agrandissement au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère au survol */
 }
 
 /* Style pour le formulaire de contact */
