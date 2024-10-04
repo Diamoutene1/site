@@ -104,7 +104,7 @@ nav .navbar ul li a.active {
     animation: underlineGrow 0.3s ease-in-out; /* Animation d'agrandissement du soulignement au survol */
 }
 
-/* Style pour les images de contact (email et LinkedIn) */
+/* Style pour les images de contact (email, LinkedIn et GitHub) */
 .contact-info img {
     width: 50px;
     height: 50px;
@@ -175,98 +175,54 @@ footer {
     animation: footerFadeIn 2s ease-in; /* Apparition progressive du footer */
 }
 
-footer p {
-    margin: 0;
-}
-
-/* Définition des animations */
 @keyframes backgroundFade {
-    0% { opacity: 1; }
-    100% { opacity: 0.8; }
+    from { opacity: 0.9; }
+    to { opacity: 1; }
 }
 
 @keyframes slideInFromTop {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideInFromBottom {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes rotateIn {
-    from {
-        transform: rotate(-360deg);
-        opacity: 0;
-    }
-    to {
-        transform: rotate(0deg);
-        opacity: 1;
-    }
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
 }
 
 @keyframes fadeInMenu {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes pulsate {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.05); }
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
 }
 
 @keyframes colorShift {
-    from { background-color: #4caf50; }
-    to { background-color: #66bb6a; }
+    from { background: #ffffff; }
+    to { background: #4caf50; }
+}
+
+@keyframes slideInFromBottom {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
 }
 
 @keyframes textFocusIn {
-    from {
-        letter-spacing: -0.5em;
-        filter: blur(12px);
-        opacity: 0;
-    }
-    to {
-        filter: blur(0px);
-        opacity: 1;
-    }
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 @keyframes fadeInText {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes bounceInLink {
-    0% { transform: scale(0.8); opacity: 0; }
-    50% { transform: scale(1.1); opacity: 1; }
-    100% { transform: scale(1); }
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes underlineGrow {
-    from { text-decoration-width: 0; }
-    to { text-decoration-width: 100%; }
+    from { text-decoration: none; }
+    to { text-decoration: underline; }
 }
 
 @keyframes footerFadeIn {
