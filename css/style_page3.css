@@ -238,7 +238,7 @@ footer p {
     }
     to {
         opacity: 1;
-}
+}}
 
 @keyframes fadeInUp {
     from {
