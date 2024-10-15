@@ -176,14 +176,16 @@ nav .navbar ul li a.active {
 
 /* Style pour les vidéos */
 .video-wrapper {
-    margin: 15px 0;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center; /* Centre les vidéos */
+    margin: 15px 0; /* Marge autour des vidéos */
 }
 
 video {
-    width: 100%;
-    border-radius: 12px;
+    max-width: 30%; /* Limite la largeur des vidéos à 80% du conteneur */
+    height: auto; /* Conserve le ratio des vidéos */
+    border-radius: 8px; /* Arrondit les bords des vidéos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre pour les vidéos */
 }
 
 /* Style pour les liens des projets */
@@ -295,6 +297,7 @@ footer p {
     color: #ff6f61; /* Couleur personnalisée pour les titres des projets */
     margin-bottom: 10px; /* Espace entre le titre et le contenu */
 }
+
 .details-button {
     background-color: #00796b; /* Couleur de fond du bouton */
     color: white; /* Couleur du texte */
