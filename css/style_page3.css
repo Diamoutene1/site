@@ -163,8 +163,10 @@ nav .navbar ul li a.active {
 /* Style pour les images */
 .image-wrapper {
     display: flex;
-    justify-content: center; /* Centre les images */
-    margin: 15px 0; /* Marge autour des images */
+    justify-content: center;
+    flex-direction: column; /* Centre le texte sous l'image */
+    align-items: center; /* Centre les éléments dans le wrapper */
+    margin: 15px 0;
 }
 
 .image-wrapper img {
@@ -173,6 +175,14 @@ nav .navbar ul li a.active {
     border-radius: 12px; /* Arrondit les bords des images */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre pour les images */
 }
+
+.image-wrapper p {
+    font-size: 16px; /* Taille du texte sous les images */
+    text-align: center; /* Centre le texte sous les images */
+    margin-top: 10px; /* Espace entre l'image et le texte */
+    color: #333; /* Couleur du texte */
+}
+
 
 /* Style pour les vidéos */
 .video-wrapper {
