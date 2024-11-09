@@ -160,59 +160,28 @@ footer {
         text-shadow: 0 0 10px #fff, 0 0 20px #ffa500, 0 0 30px #ffa500;
     }
 }
-/* Responsive pour les écrans entre 480px et 768px de large */
+/* Responsive pour les écrans entre 480px et 768px */
 @media (max-width: 768px) {
-    /* Navigation */
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar ul li {
-        margin: 8px 0; /* Espacement vertical réduit */
-    }
-
-    /* Container principal */
-    .container {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px; /* Moins de padding pour économiser de l'espace */
-    }
-
     /* Texte */
-    .text {
-        max-width: 100%; /* Utiliser toute la largeur pour le texte */
-        font-size: 1.1em; /* Agrandir le texte légèrement */
-    }
-
     .text h1 {
-        font-size: 2.5em; /* Taille du titre augmentée */
-        line-height: 1.2; /* Espacement des lignes */
+        font-size: 2.2em; /* Augmenter pour une meilleure lisibilité */
+        line-height: 1.3; /* Espacement plus confortable */
     }
 
     .text h2 {
-        font-size: 1.5em; /* Taille du sous-titre */
+        font-size: 1.5em; /* Augmentation de la taille */
+        line-height: 1.2;
     }
 
     .text p {
-        font-size: 1em; /* Taille du paragraphe légèrement agrandie */
-        line-height: 1.5; /* Espacement entre lignes pour une meilleure lisibilité */
+        font-size: 1.1em; /* Taille plus grande pour le paragraphe */
+        line-height: 1.5; /* Espacement plus grand pour la lisibilité */
     }
 
     /* Bouton */
     .btn {
-        padding: 12px 24px; /* Taille du bouton adaptée pour être cliquable */
-        font-size: 1em; /* Agrandir légèrement le texte du bouton */
-    }
-
-    /* Image de présentation */
-    .image-container {
-        margin: 20px 0;
-    }
-
-    .cercle {
-        width: 180px; /* Cercle plus grand pour la photo */
-        height: 180px;
+        padding: 12px 24px;
+        font-size: 1em;
     }
 }
 
@@ -220,30 +189,25 @@ footer {
 @media (max-width: 480px) {
     /* Texte */
     .text h1 {
-        font-size: 2em; /* Plus grand titre pour lisibilité */
+        font-size: 1.8em; /* Ajustement spécifique pour les petits écrans */
+        line-height: 1.4;
     }
 
     .text h2 {
-        font-size: 1.3em; /* Sous-titre légèrement réduit */
+        font-size: 1.3em;
+        line-height: 1.3;
     }
 
     .text p {
-        font-size: 1em; /* Taille du texte du paragraphe pour lisibilité */
+        font-size: 1em; /* Taille de texte pour petits écrans */
+        line-height: 1.6;
+        margin-bottom: 20px; /* Ajout d'un peu d'espacement sous le paragraphe */
     }
 
+    /* Bouton */
     .btn {
         padding: 10px 20px;
-        font-size: 1em; /* Garder une taille de texte visible */
-    }
-
-    /* Image */
-    .cercle {
-        width: 150px;
-        height: 150px;
-    }
-
-    /* Navigation */
-    .navbar {
-        padding: 10px;
+        font-size: 0.95em; /* Légère réduction pour s'adapter à l'écran */
     }
 }
+
