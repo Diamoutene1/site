@@ -160,3 +160,77 @@ footer {
         text-shadow: 0 0 10px #fff, 0 0 20px #ffa500, 0 0 30px #ffa500;
     }
 }
+/* Responsive pour les petits écrans */
+@media (max-width: 768px) {
+    /* Ajustement de la navigation */
+    .navbar ul {
+        flex-direction: column; /* Les éléments du menu passent en colonne */
+        align-items: center; /* Centrer les éléments */
+    }
+
+    .navbar ul li {
+        margin: 10px 0; /* Espacement vertical entre les éléments du menu */
+    }
+
+    /* Ajustement du container principal */
+    .container {
+        flex-direction: column; /* Passe la disposition en colonne */
+        text-align: center; /* Centrer le texte */
+    }
+
+    /* Texte */
+    .text {
+        max-width: 90%; /* Largeur du texte adaptée */
+    }
+
+    .text h1 {
+        font-size: 2em; /* Réduire la taille de la police */
+    }
+
+    .text h2 {
+        font-size: 1.5em; /* Réduire la taille de la police pour le sous-titre */
+    }
+
+    /* Image de présentation */
+    .image-container {
+        margin: 20px 0; /* Ajouter un espace autour de l'image */
+    }
+
+    .cercle {
+        width: 150px; /* Réduire la taille du cercle pour les mobiles */
+        height: 150px;
+    }
+
+    /* Bouton */
+    .btn {
+        padding: 10px 20px; /* Réduire la taille du bouton */
+        font-size: 16px; /* Ajustement de la taille de police du bouton */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Pour les très petits écrans (téléphones en portrait) */
+    .text h1 {
+        font-size: 1.8em; /* Encore un peu plus petit pour s'adapter */
+    }
+
+    .text p {
+        font-size: 0.9em; /* Diminuer la taille du texte */
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .navbar {
+        padding: 10px; /* Ajustement de la barre de navigation */
+    }
+
+    /* Réduction supplémentaire de l'image */
+    .cercle {
+        width: 120px;
+        height: 120px;
+    }
+}
+
