@@ -160,77 +160,90 @@ footer {
         text-shadow: 0 0 10px #fff, 0 0 20px #ffa500, 0 0 30px #ffa500;
     }
 }
-/* Responsive pour les petits écrans */
+/* Responsive pour les écrans entre 480px et 768px de large */
 @media (max-width: 768px) {
-    /* Ajustement de la navigation */
+    /* Navigation */
     .navbar ul {
-        flex-direction: column; /* Les éléments du menu passent en colonne */
-        align-items: center; /* Centrer les éléments */
+        flex-direction: column;
+        align-items: center;
     }
 
     .navbar ul li {
-        margin: 10px 0; /* Espacement vertical entre les éléments du menu */
+        margin: 8px 0; /* Espacement vertical réduit */
     }
 
-    /* Ajustement du container principal */
+    /* Container principal */
     .container {
-        flex-direction: column; /* Passe la disposition en colonne */
-        text-align: center; /* Centrer le texte */
+        flex-direction: column;
+        text-align: center;
+        padding: 10px; /* Moins de padding pour économiser de l'espace */
     }
 
     /* Texte */
     .text {
-        max-width: 90%; /* Largeur du texte adaptée */
+        max-width: 100%; /* Utiliser toute la largeur pour le texte */
+        font-size: 1.1em; /* Agrandir le texte légèrement */
     }
 
     .text h1 {
-        font-size: 2em; /* Réduire la taille de la police */
+        font-size: 2.5em; /* Taille du titre augmentée */
+        line-height: 1.2; /* Espacement des lignes */
     }
 
     .text h2 {
-        font-size: 1.5em; /* Réduire la taille de la police pour le sous-titre */
+        font-size: 1.5em; /* Taille du sous-titre */
     }
 
-    /* Image de présentation */
-    .image-container {
-        margin: 20px 0; /* Ajouter un espace autour de l'image */
-    }
-
-    .cercle {
-        width: 150px; /* Réduire la taille du cercle pour les mobiles */
-        height: 150px;
+    .text p {
+        font-size: 1em; /* Taille du paragraphe légèrement agrandie */
+        line-height: 1.5; /* Espacement entre lignes pour une meilleure lisibilité */
     }
 
     /* Bouton */
     .btn {
-        padding: 10px 20px; /* Réduire la taille du bouton */
-        font-size: 16px; /* Ajustement de la taille de police du bouton */
+        padding: 12px 24px; /* Taille du bouton adaptée pour être cliquable */
+        font-size: 1em; /* Agrandir légèrement le texte du bouton */
+    }
+
+    /* Image de présentation */
+    .image-container {
+        margin: 20px 0;
+    }
+
+    .cercle {
+        width: 180px; /* Cercle plus grand pour la photo */
+        height: 180px;
     }
 }
 
+/* Responsive pour les très petits écrans (480px et moins) */
 @media (max-width: 480px) {
-    /* Pour les très petits écrans (téléphones en portrait) */
+    /* Texte */
     .text h1 {
-        font-size: 1.8em; /* Encore un peu plus petit pour s'adapter */
+        font-size: 2em; /* Plus grand titre pour lisibilité */
+    }
+
+    .text h2 {
+        font-size: 1.3em; /* Sous-titre légèrement réduit */
     }
 
     .text p {
-        font-size: 0.9em; /* Diminuer la taille du texte */
+        font-size: 1em; /* Taille du texte du paragraphe pour lisibilité */
     }
 
     .btn {
-        padding: 8px 16px;
-        font-size: 14px;
+        padding: 10px 20px;
+        font-size: 1em; /* Garder une taille de texte visible */
     }
 
-    .navbar {
-        padding: 10px; /* Ajustement de la barre de navigation */
-    }
-
-    /* Réduction supplémentaire de l'image */
+    /* Image */
     .cercle {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Navigation */
+    .navbar {
+        padding: 10px;
     }
 }
-
