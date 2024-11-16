@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style_page3.css">
     <title>Projets - Diamoutene Zana</title>
     <meta charset="UTF-8">
-
 </head>
+
 <body>
 
+    <!-- Navigation -->
     <nav>
         <a href="index.html" class="logo">Port<span>folio</span></a>
         <div class="navbar">
@@ -20,122 +22,36 @@
         </div>
     </nav>
 
+    <!-- Conteneur principal des projets -->
     <div class="container">
         <h1>Mes Projets</h1>
 
         <!-- Section Projet BUT1 -->
-        <section class="projects-section">
+        <section class="projects-section" id="but1-section">
             <h2>Projet BUT1</h2>
-             <!-- Nouveau Projet : Maquettes Pneumatique -->
-             <div class="project-item">
-                <h3 class="project-title">Maquettes Pneumatique</h3>
-                <button class="details-button">Voir les détails</button>
-                <div class="project-details" style="display: none;">
-                    <p><strong>Description :</strong> Conception et simulation de systèmes pneumatiques automatisés utilisant la programmation Ladder.</p>
-                    <p><strong>Technologies utilisées :</strong> Programmation Ladder, Automates Programmables, Automate Schneider Electric, Pneumatique, et Contrôle de processus automatisés.</p>                    
-                    <div class="video-wrapper">
-                        <video controls>
-                            <source src="public/video/maquettes.mp4" type="video/mp4">
-                            Votre navigateur ne supporte pas la balise vidéo.
-                        </video>
-                    </div>
-                   
-                </div>
+            <div class="project-grid" id="but1-projects">
+                <!-- Les projets seront insérés ici dynamiquement par JavaScript -->
             </div>
-
-            <!-- Projet 1 : Calcul de résistance en C++ -->
-            <div class="project-item">
-                <h3 class="project-title">Calcul de résistance en C++</h3>
-                <button class="details-button">Voir les détails</button>
-                <div class="project-details" style="display: none;">
-                    <p><strong>Description :</strong> Application pour le calcul de résistance utilisant la bibliothèque BGI.</p>
-                    <p><strong>Technologies utilisées :</strong> C++, Bibliothèque BGI.</p>
-                    <div class="image-wrapper">
-    
-                        <img src="public/image/cal1.jpeg" alt="Calcul de Résistance 1" />
-                        <p>Interface BGI (graphics.h)</p>
-                    </div>
-                    <div class="image-wrapper">
-    
-                        <img src="public/image/cal2.jpeg" alt="Calcul de Résistance 2" />
-                        <p>Projets convertis pour le web en utilisant JavaScript, HTML et CSS</p>
-
-                    </div>
-                    <p><strong>Voir le projet en ligne :</strong> 
-                        <a href="https://diamoutene1.github.io/calcul-resistance/" target="_blank">Calcul de résistance</a>
-                    </p>
-                </div>
-            </div>
-
-           
         </section>
 
         <!-- Section Projets de Licence 1 -->
-        <section class="projects-section">
+        <section class="projects-section" id="licence1-section">
             <h2>Projets de Licence 1</h2>
-            <div class="project-grid">
-                <div class="project-item">
-                    <h3 class="project-title">Création de Jeux en Python</h3>
-                    <button class="details-button">Voir les détails</button>
-                    <div class="project-details" style="display: none;">
-                        <p><strong>Description :</strong> Développement de jeux classiques en Python avec Tkinter :</p>
-                        <ul>
-                            <li><strong>Le Jeu de la Vie :</strong> Simule des phénomènes naturels complexes avec des règles simples.</li>
-                            <li><strong>Le Jeu du Serpent :</strong> Contrôlez un serpent grandissant sans heurter les bords ou lui-même.</li>
-                        </ul>
-                        <p><strong>Technologies utilisées :</strong> Python, Tkinter.</p>
-                        <div class="video-wrapper">
-                            <video controls>
-                                <source src="public/video/jeu_de_la_vie.mp4" type="video/mp4">
-                                Votre navigateur ne supporte pas la balise vidéo.
-                            </video>
-                        </div>
-                        <div class="video-wrapper">
-                            <video controls>
-                                <source src="public/video/jeu_du_serpent.mp4" type="video/mp4">
-                                Votre navigateur ne supporte pas la balise vidéo.
-                            </video>
-                        </div>
-                        <p><strong>Voir le projet en ligne :</strong> 
-                            <a href="https://diamoutene1.github.io/jeu-python/" target="_blank">Jeu de la Vie et Jeu du Serpent</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <h3 class="project-title">JavaScript Asynchrone et Cartographie</h3>
-                    <button class="details-button">Voir les détails</button>
-                    <div class="project-details" style="display: none;">
-                        <p><strong>Description :</strong> Affichage de la localisation d'une image sur une carte et ajout des images Flickr géolocalisées.</p>
-                        <p><strong>Technologies utilisées :</strong> JavaScript, API Flickr, API de cartographie.</p>
-                        <div class="video-wrapper">
-                            <video controls>
-                                <source src="public/video/api_flickr.mp4" type="video/mp4">
-                                Votre navigateur ne supporte pas la balise vidéo.
-                            </video>
-                        </div>
-                        <p><strong>Voir le projet en ligne :</strong> 
-                            <a href="https://diamoutene1.github.io/projetflickr/" target="_blank">JavaScript Asynchrone et Cartographie</a>
-                        </p>
-                    </div>
-                </div>
+            <div class="project-grid" id="licence1-projects">
+                <!-- Les projets seront insérés ici dynamiquement par JavaScript -->
             </div>
         </section>
 
         <!-- Section Projet de Baccalauréat -->
-        <section class="projects-section">
+        <section class="projects-section" id="bac-section">
             <h2>Projet de Baccalauréat</h2>
-            <div class="project-item">
-                <h3 class="project-title">Système d'Arrosage Automatique</h3>
-                <button class="details-button">Voir les détails</button>
-                <div class="project-details" style="display: none;">
-                    <p><strong>Description :</strong> Conception d'un système d'arrosage automatique contrôlé par SMS avec un module GSM.</p>
-                    <p><strong>Technologies utilisées :</strong> Microcontrôleur, Module GSM, Relais, Capteurs d'humidité du sol.</p>
-                </div>
+            <div class="project-grid" id="bac-projects">
+                <!-- Les projets seront insérés ici dynamiquement par JavaScript -->
             </div>
         </section>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>© 2024 - Diamoutene Zana - Portfolio</p>
     </footer>
@@ -144,4 +60,5 @@
     <script src="public/js/projet.js"></script>
 
 </body>
+
 </html>

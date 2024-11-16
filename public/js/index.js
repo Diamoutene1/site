@@ -19,3 +19,15 @@ btn.addEventListener('mouseover', () => {
 btn.addEventListener('mouseout', () => {
     btn.style.transform = 'rotate(0deg)';
 });
+
+const changesText = document.querySelector('.changes-text');
+const roles = ["Automaticien", "Informaticien Industriel", "Développeur Système Embarqué"];
+let index = 0;
+
+function changeText() {
+    changesText.textContent = roles[index];
+    index = (index + 1) % roles.length; // Passe au mot suivant, retourne au début à la fin de la liste
+}
+
+setInterval(changeText, 4000); // Change le texte toutes les 4 secondes
+changeText(); // Initialise le texte au chargement
