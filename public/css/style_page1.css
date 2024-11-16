@@ -8,6 +8,8 @@ body {
     position: relative;
     color: #fff;
     font-family: 'Arial', sans-serif; /* Police plus moderne */
+    max-width: 100%;
+    overflow-x: hidden;  /* Évite le défilement horizontal */
 }
 
 body::before {
@@ -78,20 +80,19 @@ nav {
     padding: 20px;
 }
 
-/* Texte */
 .text {
     max-width: 50%;
 }
 
 .text h1 {
     font-size: 3em;
-    animation: fadeIn 2s ease-out, slideIn 3s ease-in-out;
+    animation: fadeIn 2s ease-out, slideIn 3s ease-in-out; /* Animation pour le titre */
 }
 
 .text h2 {
     font-size: 1.8em;
     margin: 10px 0;
-    color: #ffa500;
+    color: #ffa500; /* Couleur d'accentuation */
 }
 
 .text p {
@@ -181,6 +182,7 @@ footer a:hover {
     animation: fade-in-out 4s infinite;
 }
 
+/* Animation pour le texte qui change */
 @keyframes fade-in-out {
     0%, 100% {
         opacity: 0;
@@ -190,33 +192,25 @@ footer a:hover {
     }
 }
 
-/* === Responsiveness - Petits écrans === */
-
-/* Disposition Flex pour les petits écrans (tablettes et téléphones) */
+/* Media Queries pour le responsive */
 @media (max-width: 768px) {
+    /* Container principal */
     .container {
-        flex-direction: column; /* Disposition en colonne */
+        flex-direction: column !important;  /* Force les éléments à s'empiler verticalement */
         text-align: center;
-        padding: 20px;
-    }
-
-    .text {
-        max-width: 100%;
+        padding: 15px;
     }
 
     .text h1 {
         font-size: 2.5em;
-        margin-bottom: 15px;
     }
 
     .text h2 {
-        font-size: 1.6em;
-        margin-bottom: 10px;
+        font-size: 1.5em;
     }
 
     .text p {
         font-size: 1.2em;
-        margin-bottom: 15px;
     }
 
     .btn {
@@ -224,21 +218,6 @@ footer a:hover {
         font-size: 16px;
     }
 
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-
-    .navbar ul li {
-        margin: 10px 0;
-    }
-
-    .logo {
-        font-size: 2em;
-    }
-
-    /* Réduire la taille de l'image */
     .image-container .cercle {
         width: 150px;
         height: 150px;
@@ -250,27 +229,39 @@ footer a:hover {
     }
 }
 
-/* Pour très petits écrans (par exemple smartphone < 500px) */
+/* Pour les très petits écrans (smartphones très petits) */
 @media (max-width: 500px) {
     body {
         font-size: 14px;
     }
 
     .text h1 {
-        font-size: 2.2em;
-    }
-
-    .text h2 {
-        font-size: 1.4em;
-    }
-
-    .text p {
-        font-size: 1em;
+        font-size: 2em;
     }
 
     .btn {
         padding: 10px 20px;
-        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
     }
 
     .navbar a {
