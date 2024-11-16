@@ -176,63 +176,53 @@ footer a:hover {
     }
 }
 
-
-
 /* Animation pour changer le texte sans perturber la mise en page */
 .changes-text {
     color: #ffa500;
     font-weight: bold;
     animation: fade-in-out 4s infinite;
     display: inline-block; /* S'assurer que l'élément reste inline pour ne pas affecter le flux */
-    min-width: 100px; /* Définir une largeur minimale pour éviter des sauts de texte */
-    white-space: nowrap; /* Eviter que le texte ne se divise sur plusieurs lignes */
+    min-width: 100px; /* Largeur minimale pour éviter les changements de taille */
+    white-space: nowrap; /* Empêcher le texte de se diviser sur plusieurs lignes */
+    visibility: visible; /* Rendre le texte visible au lieu de changer d'opacité */
 }
 
 /* Animation pour le texte qui change */
 @keyframes fade-in-out {
     0%, 100% {
-        opacity: 0;
+        visibility: hidden;
     }
     20%, 80% {
-        opacity: 1;
+        visibility: visible;
     }
 }
-/* Media Queries pour le responsive */
-@media (max-width: 768px) {
-    /* Container principal */
+
+/* Responsive pour petits écrans */
+@media (max-width: 767px) {
+    .changes-text {
+        font-size: 1.2em; /* Réduire la taille du texte sur les petits écrans */
+        min-width: 80px; /* Réduire la largeur minimale */
+    }
     .container {
-        flex-direction: column !important;  /* Force les éléments à s'empiler verticalement */
-        text-align: center;
-        padding: 15px;
+        flex-direction: column; /* Empiler les éléments pour plus d'espace */
+        text-align: center; /* Centrer le texte pour les petits écrans */
     }
-
     .text h1 {
-        font-size: 2.5em;
+        font-size: 2em; /* Réduire la taille du titre sur les petits écrans */
     }
-
     .text h2 {
-        font-size: 1.5em;
+        font-size: 1.2em; /* Réduire la taille du sous-titre sur les petits écrans */
     }
-
     .text p {
-        font-size: 1.2em;
+        font-size: 1em; /* Réduire la taille du texte de paragraphe */
+        line-height: 1.5;
     }
-
     .btn {
-        padding: 12px 25px;
-        font-size: 16px;
-    }
-
-    .image-container .cercle {
-        width: 150px;
-        height: 150px;
-    }
-
-    .image-container img {
-        width: 100%;
-        height: auto;
+        padding: 10px 20px; /* Réduire la taille du bouton */
+        font-size: 1em; /* Ajuster la taille du texte sur le bouton */
     }
 }
+
 
 /* Pour les très petits écrans (smartphones très petits) */
 @media (max-width: 500px) {
