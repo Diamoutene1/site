@@ -176,10 +176,16 @@ footer a:hover {
     }
 }
 
+
+
+/* Animation pour changer le texte sans perturber la mise en page */
 .changes-text {
     color: #ffa500;
     font-weight: bold;
     animation: fade-in-out 4s infinite;
+    display: inline-block; /* S'assurer que l'élément reste inline pour ne pas affecter le flux */
+    min-width: 100px; /* Définir une largeur minimale pour éviter des sauts de texte */
+    white-space: nowrap; /* Eviter que le texte ne se divise sur plusieurs lignes */
 }
 
 /* Animation pour le texte qui change */
@@ -191,7 +197,6 @@ footer a:hover {
         opacity: 1;
     }
 }
-
 /* Media Queries pour le responsive */
 @media (max-width: 768px) {
     /* Container principal */
