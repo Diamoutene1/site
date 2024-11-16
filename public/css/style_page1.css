@@ -1,13 +1,13 @@
 /* Corps principal */
 body {
     background: url('../image/image1.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-size: cover; /* S'assurer que l'image couvre tout l'écran */
     margin: 0;
     padding: 0;
     height: 100%;
     position: relative;
     color: #fff;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif; /* Police plus moderne */
 }
 
 body::before {
@@ -17,7 +17,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Overlay sombre pour améliorer la lisibilité */
     z-index: 1;
 }
 
@@ -36,7 +36,7 @@ nav, .container, footer {
 }
 
 .logo span {
-    color: #ffa500;
+    color: #ffa500; /* Couleur d'accentuation */
 }
 
 nav {
@@ -66,7 +66,7 @@ nav {
 }
 
 .navbar a:hover, .navbar .active {
-    color: #ffa500;
+    color: #ffa500; /* Couleur d'accentuation */
 }
 
 /* Container principal */
@@ -84,13 +84,13 @@ nav {
 
 .text h1 {
     font-size: 3em;
-    animation: fadeIn 2s ease-out, slideIn 3s ease-in-out;
+    animation: fadeIn 2s ease-out, slideIn 3s ease-in-out; /* Animation pour le titre */
 }
 
 .text h2 {
     font-size: 1.8em;
     margin: 10px 0;
-    color: #ffa500;
+    color: #ffa500; /* Couleur d'accentuation */
 }
 
 .text p {
@@ -173,99 +173,18 @@ footer a:hover {
         transform: translateY(0);
     }
 }
-
 .changes-text {
     color: #ffa500;
     font-weight: bold;
     animation: fade-in-out 4s infinite;
 }
 
+/* Animation pour le texte qui change */
 @keyframes fade-in-out {
     0%, 100% {
         opacity: 0;
     }
     20%, 80% {
         opacity: 1;
-    }
-}
-
-/* === MEDIA QUERIES === */
-
-/* Adaptations pour les petits écrans  */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Réduit la taille de la police */
-    }
-
-    .container {
-        flex-direction: column; /* Dispose les éléments en colonne */
-        align-items: flex-start;
-    }
-
-    .text {
-        max-width: 100%; /* Prend toute la largeur sur petits écrans */
-        text-align: center; /* Centre le texte */
-        margin-bottom: 20px;
-    }
-
-    .text h1 {
-        font-size: 2.5em; /* Réduit la taille du titre */
-    }
-
-    .text h2 {
-        font-size: 1.5em; /* Réduit la taille du sous-titre */
-    }
-
-    .btn {
-        width: 100%; /* Les boutons prennent toute la largeur */
-        padding: 15px;
-        text-align: center;
-    }
-
-    .image-container .cercle {
-        width: 150px;
-        height: 150px;
-    }
-
-    nav .navbar ul {
-        flex-direction: column;
-        align-items: center; /* Aligne les éléments de navigation au centre */
-    }
-
-    .navbar ul li {
-        margin: 10px 0;
-    }
-
-    .navbar a {
-        font-size: 16px; /* Réduit la taille de la police dans la barre de navigation */
-    }
-
-    footer {
-        font-size: 14px; /* Réduit la taille de la police dans le pied de page */
-    }
-}
-
-/* Adaptations pour les très petits écrans (moins de 480px) */
-@media (max-width: 480px) {
-    .text h1 {
-        font-size: 2em; /* Taille de titre encore plus petite */
-    }
-
-    .text h2 {
-        font-size: 1.3em; /* Taille de sous-titre encore plus petite */
-    }
-
-    .btn {
-        padding: 12px 20px;
-        font-size: 16px;
-    }
-
-    .logo {
-        font-size: 1.5em; /* Taille du logo plus petite */
-    }
-
-    footer {
-        font-size: 12px; /* Réduit encore plus la taille de la police */
-        padding: 15px; /* Réduit le padding du pied de page */
     }
 }
