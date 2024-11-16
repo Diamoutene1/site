@@ -21,7 +21,7 @@ btn.addEventListener('mouseout', () => {
 });
 
 const changesText = document.querySelector('.changes-text');
-const roles = ["Automaticien", "Informaticien Industriel", "Développeur Système Embarqué"];
+const roles = ["Automaticien", "Informaticien Industriel", "Développeur Embarqué"];
 let index = 0;
 
 function changeText() {
