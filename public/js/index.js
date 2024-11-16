@@ -29,5 +29,5 @@ function changeText() {
     index = (index + 1) % roles.length; // Passe au mot suivant, retourne au début à la fin de la liste
 }
 
-setInterval(changeText, 4000); // Change le texte toutes les 4 secondes
+setInterval(changeText, 2000); // Change le texte toutes les 4 secondes
 changeText(); // Initialise le texte au chargement
