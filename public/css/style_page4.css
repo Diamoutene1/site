@@ -1,4 +1,4 @@
-/* Définition de la police principale et des couleurs */
+/* Corps principal */
 body {
     font-family: 'Georgia', serif;
     color: #333333;
@@ -175,6 +175,85 @@ footer {
     animation: footerFadeIn 2s ease-in; /* Apparition progressive du footer */
 }
 
+/* Media Queries pour le responsive */
+@media (max-width: 768px) {
+    /* Pour les écrans de taille moyenne à petite (tablettes et mobiles) */
+    nav .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .container h1 {
+        font-size: 28px;
+    }
+
+    .contact-info p {
+        font-size: 16px;
+    }
+
+    .contact-info img {
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+    }
+
+    .form-container input,
+    .form-container textarea {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .form-container button {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Pour les très petits écrans (mobiles) */
+    body {
+        background-size: auto;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .container h1 {
+        font-size: 24px;
+    }
+
+    .contact-info {
+        font-size: 16px;
+    }
+
+    .contact-info img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .form-container input,
+    .form-container textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .form-container button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Animations */
 @keyframes backgroundFade {
     from { opacity: 0.9; }
     to { opacity: 1; }
@@ -229,6 +308,3 @@ footer {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
-
-
