@@ -19,15 +19,24 @@ btn.addEventListener('mouseover', () => {
 btn.addEventListener('mouseout', () => {
     btn.style.transform = 'rotate(0deg)';
 });
-
 const changesText = document.querySelector('.changes-text');
 const roles = ["Automaticien / Roboticien", "Informaticien Industriel", "Développeur Système Embarqué"];
 let index = 0;
 
 function changeText() {
-    changesText.textContent = roles[index];
-    index = (index + 1) % roles.length; // Passe au mot suivant, retourne au début à la fin de la liste
+    // Diminue l'opacité pour créer un effet de sortie
+    changesText.style.opacity = 0;
+
+    // Change le texte après une brève pause
+    setTimeout(() => {
+        changesText.textContent = roles[index];
+        index = (index + 1) % roles.length; // Boucle à travers les rôles
+        changesText.style.opacity = 1; // Restaure l'opacité pour créer un effet d'entrée
+    }, 500); // Pause pour l'effet de disparition
 }
 
-setInterval(changeText, 2000); // Change le texte toutes les 4 secondes
-changeText(); // Initialise le texte au chargement
+// Change le texte toutes les 4 secondes
+setInterval(changeText, 3000);
+
+// Initialisation immédiate
+changeText();

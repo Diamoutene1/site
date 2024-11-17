@@ -94,18 +94,32 @@ nav {
     margin: 10px 0;
     color: #ffa500; /* Couleur d'accentuation */
 }
-.text h3 {
-    font-size: 1.8em;
-    margin: 10px 0;
-    color: #ffa500; /* Couleur d'accentuation */
+
+.changes-text {
+    display: inline-block; /* Garde le texte dans une seule ligne */
+    padding: 5px 10px;
+    background: rgba(255, 165, 0, 0.1); /* Arrière-plan léger */
+    border: 2px solid #ffa500; /* Bordure orange pour encadrer l'animation */
+    border-radius: 5px; /* Coins arrondis */
+    min-width: 300px; /* Largeur minimale pour éviter les sauts visuels */
+    text-align: center; /* Centrer le texte */
+    color: #ffa500;
+    font-weight: bold;
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    transition: opacity 0.5s ease-in-out; /* Transition fluide de l'opacité */
 }
 
-
-.text p {
-    line-height: 1.6;
-    margin: 20px 0;
+/* Animation des changements de texte */
+@keyframes fade-in-out {
+    0%, 100% {
+        opacity: 0; /* Commence et finit avec une opacité nulle */
+    }
+    20%, 80% {
+        opacity: 1; /* Texte visible pendant le milieu de l'animation */
+    }
 }
 
+/* Bouton */
 .btn {
     display: inline-block;
     padding: 15px 30px;
@@ -182,27 +196,6 @@ footer a:hover {
     }
 }
 
-/* Animation pour changer le texte sans perturber la mise en page */
-.changes-text {
-    color: #ffa500;
-    font-weight: bold;
-    animation: fade-in-out 4s infinite;
-    display: inline-block; /* S'assurer que l'élément reste inline pour ne pas affecter le flux */
-    min-width: 100px; /* Largeur minimale pour éviter les changements de taille */
-    white-space: nowrap; /* Empêcher le texte de se diviser sur plusieurs lignes */
-    visibility: visible; /* Rendre le texte visible au lieu de changer d'opacité */
-}
-
-/* Animation pour le texte qui change */
-@keyframes fade-in-out {
-    0%, 100% {
-        visibility: hidden;
-    }
-    20%, 80% {
-        visibility: visible;
-    }
-}
-
 /* Responsive pour petits écrans */
 @media (max-width: 767px) {
     .changes-text {
@@ -218,14 +211,7 @@ footer a:hover {
     }
     .text h2 {
         font-size: 1.2em; /* Réduire la taille du sous-titre sur les petits écrans */
-
     }
-    .text h2 {
-        font-size: 1.2em;
-        margin: 10px 0;
-        color: #ffa500; /* Couleur d'accentuation */
-    }
-    
     .text p {
         font-size: 1em; /* Réduire la taille du texte de paragraphe */
         line-height: 1.5;
