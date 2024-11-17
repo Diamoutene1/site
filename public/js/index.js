@@ -20,14 +20,34 @@ btn.addEventListener('mouseout', () => {
     btn.style.transform = 'rotate(0deg)';
 });
 
+// Sélectionne l'élément HTML qui contiendra le texte animé
 const changesText = document.querySelector('.changes-text');
+
+// Liste des rôles à afficher dans l'animation
 const roles = ["Automaticien", "Informaticien Industriel", "Développeur Embarqué"];
+
+// Initialise un index pour parcourir les rôles
 let index = 0;
 
+/**
+ * Fonction pour changer le texte affiché
+ * - Ajoute une animation de fondu (opacity) pour une transition fluide
+ * - Change le texte après une brève pause
+ */
 function changeText() {
-    changesText.textContent = roles[index];
-    index = (index + 1) % roles.length; // Passe au mot suivant, retourne au début à la fin de la liste
+    // Diminue l'opacité à 0 pour créer un effet de disparition
+    changesText.style.opacity = 0;
+
+    // Change le texte après 500 ms (le temps que l'effet de disparition soit visible)
+    setTimeout(() => {
+        changesText.textContent = roles[index]; // Modifie le contenu du texte avec le rôle actuel
+        changesText.style.opacity = 1; // Rétablit l'opacité à 1 pour réapparaître
+        index = (index + 1) % roles.length; // Passe au rôle suivant (retourne au début à la fin de la liste)
+    }, 500);
 }
 
-setInterval(changeText, 2000); // Change le texte toutes les 4 secondes
-changeText(); // Initialise le texte au chargement
+// Met en place un intervalle pour appeler la fonction `changeText` toutes les  secondes
+setInterval(changeText, 3000);
+
+// Appelle immédiatement `changeText` pour afficher le premier rôle au chargement de la page
+changeText();
