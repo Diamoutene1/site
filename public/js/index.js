@@ -20,7 +20,7 @@ btn.addEventListener('mouseout', () => {
     btn.style.transform = 'rotate(0deg)';
 });
 const changesText = document.querySelector('.changes-text');
-const roles = ["Automaticien / Roboticien", "Informaticien Industriel", "Développeur Système Embarqué"];
+const roles = ["Automaticien / Roboticien", "Informaticien Industriel"];
 let index = 0;
 
 function changeText() {

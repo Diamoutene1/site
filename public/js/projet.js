@@ -237,7 +237,7 @@ function insertProjects() {
             section.appendChild(projectItem);
 
             // Animation d'apparition des projets au chargement
-            setTimeout(() => {
+            setTimeout (() => {
                 projectItem.style.opacity = 1; // Modifie l'opacité pour faire apparaître le projet
                 projectItem.style.transition = 'opacity 0.6s ease'; // Ajoute une transition d'opacité
             }, index * 200); // Décale l'animation pour chaque projet
@@ -247,7 +247,7 @@ function insertProjects() {
         } catch (error) {
             console.error(`Erreur lors de l'insertion du projet ${project.title}: `, error);
         }
-    });
+    }); // setTime est une fonction asynchrone, ce qui signifie que la fonction passée en argument ne bloquera pas l'exécution des autres fonctions de la pile d'appels.
     
 }
 

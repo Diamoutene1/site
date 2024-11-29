@@ -133,4 +133,15 @@ footer {
     }
 }
 
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 768px) {
+    nav .navbar ul li {
+        display: block; /* Affiche les éléments de la navbar en bloc pour les petits écrans */
+        margin: 10px 0; /* Espacement vertical */
+    }
 
+    nav .navbar ul li a {
+        font-size: 18px; /* Réduction de la taille de la police pour les petits écrans */
+        padding: 8px 12px; /* Ajustement du padding */}
+
+    }

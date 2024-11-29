@@ -175,84 +175,6 @@ footer {
     animation: footerFadeIn 2s ease-in; /* Apparition progressive du footer */
 }
 
-/* Media Queries pour le responsive */
-@media (max-width: 768px) {
-    /* Pour les écrans de taille moyenne à petite (tablettes et mobiles) */
-    nav .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav .navbar ul li {
-        margin: 10px 0;
-    }
-
-    .container {
-        padding: 20px;
-        max-width: 100%;
-    }
-
-    .container h1 {
-        font-size: 28px;
-    }
-
-    .contact-info p {
-        font-size: 16px;
-    }
-
-    .contact-info img {
-        width: 40px;
-        height: 40px;
-        margin-right: 8px;
-    }
-
-    .form-container input,
-    .form-container textarea {
-        font-size: 16px;
-        padding: 8px;
-    }
-
-    .form-container button {
-        font-size: 16px;
-        padding: 8px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Pour les très petits écrans (mobiles) */
-    body {
-        background-size: auto;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    .container h1 {
-        font-size: 24px;
-    }
-
-    .contact-info {
-        font-size: 16px;
-    }
-
-    .contact-info img {
-        width: 35px;
-        height: 35px;
-    }
-
-    .form-container input,
-    .form-container textarea {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    .form-container button {
-        font-size: 14px;
-        padding: 8px;
-    }
-}
-
 /* Animations */
 @keyframes backgroundFade {
     from { opacity: 0.9; }
@@ -307,4 +229,74 @@ footer {
 @keyframes footerFadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+/* Media queries pour améliorer la réactivité */
+@media only screen and (max-width: 1200px) {
+    .container {
+        max-width: 800px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .container {
+        max-width: 700px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 600px;
+        padding: 20px; /* Réduire le padding pour les petits écrans */
+    }
+
+    nav .navbar ul {
+        flex-direction: column; /* Changer la direction en colonne sur les petits écrans */
+    }
+
+    nav .navbar ul li {
+        margin: 10px 0; /* Espacement vertical entre les éléments de la navbar */
+    }
+
+    .container h1 {
+        font-size: 28px; /* Réduire la taille de la police sur les petits écrans */
+    }
+
+    .contact-info {
+        font-size: 16px; /* Réduire la taille de la police pour les informations de contact */
+    }
+
+    .form-container input,
+    .form-container textarea {
+        font-size: 16px; /* Ajuster la taille de la police des champs de formulaire */
+    }
+
+    .form-container button {
+        font-size: 16px; /* Ajuster la taille de la police du bouton */
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        max-width: 500px;
+        padding: 15px; /* Réduire le padding pour les très petits écrans */
+    }
+
+    .contact-info {
+        font-size: 14px; /* Réduire la taille de la police pour les informations de contact sur les très petits écrans */
+    }
+
+    .form-container input,
+    .form-container textarea {
+        font-size: 14px; /* Ajuster la taille de la police des champs de formulaire sur les très petits écrans */
+    }
+
+    .form-container button {
+        font-size: 14px; /* Ajuster la taille de la police du bouton sur les très petits écrans */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        max-width: 400px;
+    }
 }

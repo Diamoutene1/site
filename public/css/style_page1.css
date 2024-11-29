@@ -196,12 +196,16 @@ footer a:hover {
     }
 }
 
-/* Responsive Design */
-
-/* Sur les grands écrans (tablettes et ordinateurs) */
-@media (max-width: 1200px) {
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 768px) {
     .container {
         flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .text {
+        max-width: 100%;
         text-align: center;
     }
 
@@ -210,132 +214,38 @@ footer a:hover {
     }
 
     .text h2 {
-        font-size: 1.6em;
-    }
-
-    .text {
-        max-width: 80%;
-    }
-}
-
-/* Sur les tablettes et petits écrans */
-@media (max-width: 992px) {
-    .logo {
-        font-size: 1.8em;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar ul li {
-        margin: 10px 0;
-    }
-
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .text h1 {
-        font-size: 2.2em;
-    }
-
-    .text h2 {
-        font-size: 1.4em;
-    }
-
-    .text {
-        max-width: 90%;
-    }
-
-    .changes-text {
-        min-width: 250px;
-    }
-}
-
-/* Sur les petits écrans (téléphones mobiles) */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
-    .logo {
         font-size: 1.5em;
     }
 
-    nav {
-        padding: 10px;
+    .image-container .cercle {
+        width: 150px;
+        height: 150px;
     }
 
-    .navbar a {
-        font-size: 16px;
+    .btn {
+        padding: 10px 20px;
     }
+}
 
-    .container {
-        padding: 10px;
-    }
-
+@media (max-width: 480px) {
     .text h1 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
 
     .text h2 {
         font-size: 1.2em;
     }
 
-    .changes-text {
-        min-width: 200px;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-}
-
-/* Sur les très petits écrans (téléphones en mode portrait) */
-@media (max-width: 576px) {
-    body {
-        font-size: 12px;
-    }
-
-    .logo {
-        font-size: 1.3em;
-    }
-
-    nav {
-        padding: 8px;
-    }
-
     .navbar a {
-        font-size: 14px;
+        font-size: 16px;
     }
 
-    .container {
+    .navbar ul {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
-    .text h1 {
-        font-size: 1.6em;
-    }
-
-    .text h2 {
-        font-size: 1.1em;
-    }
-
-    .text {
-        max-width: 100%;
-    }
-
-    .changes-text {
-        min-width: 180px;
-    }
-
-    .btn {
-        padding: 8px 16px;
-        font-size: 0.9rem;
+    .navbar ul li {
+        margin: 10px 0;
     }
 }
