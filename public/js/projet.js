@@ -72,7 +72,7 @@ const projectss = [
         section: 'but1',
         title: 'Pilomo1.0',
         description: "Conception, fabrication et mise au point d'une carte électronique permettant la commande de 2 moteurs à courant continu, suivie du développement de programmes Arduino Nano en langage C pour réaliser différentes tâches robotiques.",
-        technologies: 'Arduino, Langage C,Proteus, Génie électrique, Génie informatique.',
+        technologies: 'Arduino IDE , Langage C,Proteus,Carte Arduino(Nano).',
         video: null,
         image: ['public/image/pilomo-image1.png', 'public/image/pilomo-image2.png'],
         pdf: null, // Chemin ou lien vers le PDF
