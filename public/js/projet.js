@@ -70,6 +70,32 @@ document.addEventListener('DOMContentLoaded', function() {
 const projectss = [
     {
         section: 'but1',
+        title: 'Pilomo1.0',
+        description: "Conception, fabrication et mise au point d'une carte électronique permettant la commande de 2 moteurs à courant continu, suivie du développement de programmes Arduino Nano en langage C pour réaliser différentes tâches robotiques.",
+        technologies: 'Arduino, Langage C,Proteus, Génie électrique, Génie informatique.',
+        video: null,
+        image: ['public/image/pilomo-image1.png', 'public/image/pilomo-image2.png'],
+        pdf: null, // Chemin ou lien vers le PDF
+        link: null, // Chemin ou lien
+        details: [
+            {
+                title: "Conception et Fabrication",
+                description: "Deux cartes électroniques ont été conçues : une carte commande et une carte puissance. La carte puissance gère les deux moteurs à courant continu et inclut des MOSFET (BUZ11), des résistances, des diodes, et des connecteurs robustes. La carte commande, basée sur un Arduino Nano, génère des signaux PWM pour un contrôle précis des moteurs.",
+                
+               
+            },
+            {
+                title: "Programmation Arduino",
+                description: "Des programmes en langage C ont été développés pour contrôler les moteurs et réaliser diverses tâches, comme la gestion des vitesses, le suivi de paroi, et l'évitement d'obstacles. Chaque fonctionnalité a été codée en respectant une progression de difficulté, comme indiqué dans les spécifications du projet.",
+                video: "public/video/pilomo-video1.mp4"
+            },
+            
+                
+        ]
+    },
+    
+    {
+        section: 'but1',
         title: 'Maquettes Pneumatique',
         description: 'Conception et simulation de systèmes pneumatiques automatisés utilisant la programmation Ladder.',
         technologies: 'Programmation Ladder, Automates Programmables, Automate Schneider Electric, Pneumatique, et Contrôle de processus automatisés.',
@@ -176,16 +202,7 @@ function insertProjects() {
             technologies.innerHTML = `<strong>Technologies utilisées :</strong> ${project.technologies}`;
             projectDetails.appendChild(technologies);
 
-            // Ajout des détails supplémentaires (par exemple pour des jeux)
-            if (project.details) {
-                const ul = document.createElement('ul');
-                project.details.forEach(detail => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `<strong>${detail.title} :</strong> ${detail.description}`;
-                    ul.appendChild(li);
-                });
-                projectDetails.appendChild(ul);
-            }
+           
 
             // Ajout des vidéos
             if (project.video) {
@@ -224,6 +241,42 @@ function insertProjects() {
                     imageWrapper.appendChild(img);
                     projectDetails.appendChild(imageWrapper);
                 });
+            }
+             // Ajout des détails supplémentaires (par exemple pour des jeux)
+             if (project.details) {
+                const ul = document.createElement('ul');
+                project.details.forEach(detail => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<strong>${detail.title} :</strong> ${detail.description}`;
+                    ul.appendChild(li);
+            
+                    // Vérifiez s'il y a des images à afficher
+                    if (detail.image) {
+                        const imageWrapper = document.createElement('div');
+                        imageWrapper.classList.add('image-wrapper');
+                        const img = document.createElement('img');
+                        img.setAttribute('src', detail.image);
+                        img.setAttribute('alt', detail.title);
+                        imageWrapper.appendChild(img);
+                        li.appendChild(imageWrapper); // Ajoutez l'image à l'élément de liste
+                    }
+            
+                    // Vérifiez s'il y a des vidéos à afficher
+                    if (detail.video) {
+                        const videoWrapper = document.createElement('div');
+                        videoWrapper.classList.add('video-wrapper');
+                        const video = document.createElement('video');
+                        video.setAttribute('controls', '');
+                        const source = document.createElement('source');
+                        source.setAttribute('src', detail.video);
+                        source.setAttribute('type', 'video/mp4');
+                        video.appendChild(source);
+                        videoWrapper.appendChild(video);
+                        li.appendChild(videoWrapper); // Ajoutez la vidéo à l'élément de liste
+                    }
+                    
+                });
+                projectDetails.appendChild(ul);
             }
 
             // Ajout d'un lien vers le projet en ligne
