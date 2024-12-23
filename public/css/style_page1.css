@@ -45,6 +45,9 @@ nav {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar ul {
@@ -196,56 +199,57 @@ footer a:hover {
     }
 }
 
-/* Media Queries pour rendre le site responsive */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .text {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .text h1 {
-        font-size: 2.5em;
-    }
-
-    .text h2 {
-        font-size: 1.5em;
-    }
-
-    .image-container .cercle {
-        width: 150px;
-        height: 150px;
-    }
-
-    .btn {
-        padding: 10px 20px;
-    }
+/* Responsive Design */
+.menu-toggle {
+    display: none; /* Masqué par défaut pour les grands écrans */
+    background: none;
+    border: 2px solid #ffa500;
+    color: #ffa500;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1001;
+    transition: background-color 0.3s;
 }
 
-@media (max-width: 480px) {
-    .text h1 {
-        font-size: 2em;
+.menu-toggle.open {
+    background-color: #ffa500;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
     }
 
-    .text h2 {
-        font-size: 1.2em;
-    }
-
-    .navbar a {
-        font-size: 16px;
-    }
-
-    .navbar ul {
+    .navbar {
+        display: none; /* Masquer par défaut sur les petits écrans */
         flex-direction: column;
-        align-items: center;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        display: flex; /* Afficher le menu si la classe active est ajoutée */
     }
 
     .navbar ul li {
         margin: 10px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+        text-align: center;
+        padding: 10px;
+        display: block;
     }
 }

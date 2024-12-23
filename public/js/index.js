@@ -8,6 +8,28 @@ window.addEventListener('load', function() {
         }, index * 200); // Échelonnement des animations
     });
 });
+// Sélection des éléments du DOM
+const menuToggle = document.createElement('button');
+menuToggle.classList.add('menu-toggle');
+menuToggle.innerText = 'Menu';
+document.querySelector('nav').appendChild(menuToggle);
+
+const navbar = document.querySelector('.navbar');
+
+// Fonction pour basculer l'affichage du menu
+menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+    menuToggle.classList.toggle('open');
+});
+
+// Fermer le menu si un lien est cliqué
+navbar.addEventListener('click', (event) => {
+    if (event.target.tagName === 'A') {
+        navbar.classList.remove('active');
+        menuToggle.classList.remove('open');
+    }
+});
+
 
 // Effet de rotation sur le bouton de téléchargement du CV
 const btn = document.querySelector('.btn');
