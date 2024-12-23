@@ -117,16 +117,18 @@ const projectss = [
         title: 'Création de Jeux en Python',
         description: 'Développement de jeux classiques en Python avec Tkinter : Jeu de la Vie, Jeu du Serpent.',
         technologies: 'Python, Tkinter.',
-        video: ['public/video/jeu_de_la_vie.mp4', 'public/video/jeu_du_serpent.mp4'],
+        video: null,
         link: 'https://diamoutene1.github.io/jeu-python/',
         details: [
             {
                 title: "Le Jeu de la Vie",
                 description: "Le Jeu de la Vie est un automate cellulaire développé par John Conway. Il simule des phénomènes naturels à partir de règles simples : chaque cellule peut être vivante ou morte, et son état dépend de celui de ses voisins. Ce jeu illustre comment des structures complexes émergent à partir de règles simples. Dans ce projet, vous pouvez observer des motifs comme les oscillateurs, les réplicateurs et les vaisseaux.",
+                video:'public/video/jeu_de_la_vie.mp4',
             },
             {
                 title: "Le Jeu du Serpent",
                 description: "Le Jeu du Serpent est un jeu classique où le joueur contrôle un serpent qui se déplace sur un écran, mangeant des objets pour grandir tout en évitant les murs et de se mordre. Le but du jeu est de survivre le plus longtemps possible en faisant croître le serpent tout en évitant les collisions. Ce projet utilise la bibliothèque Tkinter pour créer une interface graphique et gérer les événements du clavier pour contrôler le serpent.",
+                video: 'public/video/jeu_du_serpent.mp4',
             }
         ]
     },
