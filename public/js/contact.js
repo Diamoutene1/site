@@ -12,20 +12,3 @@ contactLinks.forEach(link => {
     });
 });
 
-// Attendre que le DOM soit complètement chargé
-document.addEventListener('DOMContentLoaded', function() {
-    // Sélectionner le bouton de menu et la barre de navigation
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navbar = document.querySelector('.navbar');
-
-    // Ajouter un événement de clic au bouton du menu
-    menuToggle.addEventListener('click', function() {
-        // Alterner la classe 'active' sur la barre de navigation
-        navbar.classList.toggle('active');
-        
-        // Alterner la classe 'open' sur le bouton du menu pour changer son apparence
-        menuToggle.classList.toggle('open');
-    });
-});
-
-

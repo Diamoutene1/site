@@ -45,9 +45,6 @@ nav {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .navbar ul {
@@ -199,57 +196,56 @@ footer a:hover {
     }
 }
 
-/* Responsive Design */
-.menu-toggle {
-    display: none; /* Masqué par défaut pour les grands écrans */
-    background: none;
-    border: 2px solid #ffa500;
-    color: #ffa500;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    z-index: 1001;
-    transition: background-color 0.3s;
-}
-
-.menu-toggle.open {
-    background-color: #ffa500;
-    color: #000;
-}
-
+/* Media Queries pour rendre le site responsive */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .navbar {
-        display: none; /* Masquer par défaut sur les petits écrans */
+    .container {
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        padding: 10px 0;
-        z-index: 1000;
+        align-items: center;
+        padding: 10px;
     }
 
-    .navbar.active {
-        display: flex; /* Afficher le menu si la classe active est ajoutée */
+    .text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 2.5em;
+    }
+
+    .text h2 {
+        font-size: 1.5em;
+    }
+
+    .image-container .cercle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text h1 {
+        font-size: 2em;
+    }
+
+    .text h2 {
+        font-size: 1.2em;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
     }
 
     .navbar ul li {
         margin: 10px 0;
-    }
-
-    .navbar ul li a {
-        font-size: 18px;
-        text-align: center;
-        padding: 10px;
-        display: block;
     }
 }
