@@ -148,6 +148,7 @@ const projectss = [
         technologies: 'Microcontrôleur, Module GSM, Relais, Capteurs d\'humidité du sol.',
         video: null,
         link: null,
+        pdf:'public/Dossier/Rapport_projet_1.pdf',
         image: null,
     }
 ];
@@ -204,8 +205,6 @@ function insertProjects() {
             technologies.innerHTML = `<strong>Technologies utilisées :</strong> ${project.technologies}`;
             projectDetails.appendChild(technologies);
 
-           
-
             // Ajout des vidéos
             if (project.video) {
                 const videoWrapper = document.createElement('div');
@@ -244,15 +243,16 @@ function insertProjects() {
                     projectDetails.appendChild(imageWrapper);
                 });
             }
-             // Ajout des détails supplémentaires (par exemple pour des jeux)
-             if (project.details) {
+
+            // Ajout des détails supplémentaires
+            if (project.details) {
                 const ul = document.createElement('ul');
                 project.details.forEach(detail => {
                     const li = document.createElement('li');
                     li.innerHTML = `<strong>${detail.title} :</strong> ${detail.description}`;
                     ul.appendChild(li);
-            
-                    // Vérifiez s'il y a des images à afficher
+
+                    // Vérifiez s'il y a des images ou vidéos à afficher
                     if (detail.image) {
                         const imageWrapper = document.createElement('div');
                         imageWrapper.classList.add('image-wrapper');
@@ -260,10 +260,9 @@ function insertProjects() {
                         img.setAttribute('src', detail.image);
                         img.setAttribute('alt', detail.title);
                         imageWrapper.appendChild(img);
-                        li.appendChild(imageWrapper); // Ajoutez l'image à l'élément de liste
+                        li.appendChild(imageWrapper);
                     }
-            
-                    // Vérifiez s'il y a des vidéos à afficher
+
                     if (detail.video) {
                         const videoWrapper = document.createElement('div');
                         videoWrapper.classList.add('video-wrapper');
@@ -274,9 +273,8 @@ function insertProjects() {
                         source.setAttribute('type', 'video/mp4');
                         video.appendChild(source);
                         videoWrapper.appendChild(video);
-                        li.appendChild(videoWrapper); // Ajoutez la vidéo à l'élément de liste
+                        li.appendChild(videoWrapper);
                     }
-                    
                 });
                 projectDetails.appendChild(ul);
             }
@@ -288,22 +286,27 @@ function insertProjects() {
                 projectDetails.appendChild(projectLink);
             }
 
+            // Ajout d'un lien ou bouton pour le fichier PDF
+            if (project.pdf) {
+                const pdfLink = document.createElement('p');
+                pdfLink.innerHTML = `<strong>Documentation PDF :</strong> <a href="${project.pdf}" target="_blank">Télécharger ou consulter</a>`;
+                projectDetails.appendChild(pdfLink);
+            }
+
             // Ajout du projet à la section correspondante
             section.appendChild(projectItem);
 
             // Animation d'apparition des projets au chargement
-            setTimeout (() => {
+            setTimeout(() => {
                 projectItem.style.opacity = 1; // Modifie l'opacité pour faire apparaître le projet
                 projectItem.style.transition = 'opacity 0.6s ease'; // Ajoute une transition d'opacité
             }, index * 200); // Décale l'animation pour chaque projet
 
-            // Log pour vérifier l'apparition de chaque projet
             console.log(`Projet ajouté : ${project.title}, ID du projet : ${projectItem.id}`);
         } catch (error) {
             console.error(`Erreur lors de l'insertion du projet ${project.title}: `, error);
         }
-    }); // setTime est une fonction asynchrone, ce qui signifie que la fonction passée en argument ne bloquera pas l'exécution des autres fonctions de la pile d'appels.
-    
+    });
 }
 
 // Appel de la fonction pour insérer les projets au chargement de la page
