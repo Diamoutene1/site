@@ -148,7 +148,7 @@ const projectss = [
         technologies: 'Microcontrôleur, Module GSM, Relais, Capteurs d\'humidité du sol.',
         video: null,
         link: null,
-        pdf:'public/Dossier/Rapport_projet_1.pdf',
+        pdf:'public/Dossier/Rapport_bac.pdf',
         image: null,
     }
 ];
