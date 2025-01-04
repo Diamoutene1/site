@@ -7,7 +7,7 @@
         technologies: 'Arduino IDE , Langage C,Proteus,Carte Arduino(Nano).',
         video: null,
         image: ['public/image/pilomo-image1.png', 'public/image/pilomo-image2.png'],
-        pdf: null, // Chemin ou lien vers le PDF
+        pdf: 'public/Dossier/Projet PILOMO ZANA et ETIENNE_compressed.pdf', // Chemin ou lien vers le PDF
         link: null, // Chemin ou lien
         details: [
             {
