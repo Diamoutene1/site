@@ -20,7 +20,7 @@ btn.addEventListener('mouseout', () => {
     btn.style.transform = 'rotate(0deg)';
 });
 const changesText = document.querySelector('.changes-text');
-const roles = ["Automaticien / Roboticien", "Informaticien Industriel"];
+const roles = ["Automaticien/Électrotechnicien", "Informaticien Industriel"];
 let index = 0;
 
 function changeText() {
@@ -35,7 +35,7 @@ function changeText() {
     }, 500); // Pause pour l'effet de disparition
 }
 
-// Change le texte toutes les 4 secondes
+// Change le texte toutes les 3 secondes
 setInterval(changeText, 3000);
 
 // Initialisation immédiate
