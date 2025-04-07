@@ -1,8 +1,35 @@
 // Liste des projets avec détails, vidéos, images, etc.
  const projectss = [
+
     {
         section: 'but1',
-        title: 'Pilomo1.0',
+        title: 'Linéa (robot suiveur de ligne)',
+        description: "Le projet inclut la fabrication d’une carte de commande pour deux moteurs à courant continu, ainsi qu’une carte de détection optique simulant les yeux du robot pour le repérage de la ligne. Plusieurs programmes en langage C ont été développés pour assurer le suivi de ligne et exécuter diverses tâches robotiques.",
+        technologies: "PIC18F2520, MPLAB X IDE, Langage C, Proteus, Microchip.",
+      
+        video: null,
+        image: ['public/image/linea1.jpg', 'public/image/linea2.jpg', 'public/image/linea3.jpg', 'public/image/linea4.jpg', 'public/image/linea5.jpg'],
+        pdf: null, // Chemin ou lien vers le PDF
+        link: null, // Chemin ou lien
+        details: [
+            {
+                title: "Conception et Fabrication",
+                description: "Deux cartes électroniques ont été fabriquées : une carte de puissance pour le pilotage de deux moteurs à courant continu, et une carte de détection simulant les yeux du robot à l'aide de capteurs optiques pour le suivi de ligne. La carte de commande, fournie au départ, est basée sur le microcontrôleur PIC10F2520 et génère les signaux nécessaires pour contrôler les moteurs. La carte de puissance comprend des MOSFET BUZ11, des résistances, des diodes de roue libre et des connecteurs robustes.",
+                
+               
+            },
+            {
+                title: "Programmation avec PIC",
+                 description: "Des programmes en langage C ont été développés à l’aide de MPLAB X IDE pour le microcontrôleur PIC18F2520. Ces programmes assurent le suivi de ligne à partir des données reçues par les capteurs optiques et contrôlent les moteurs via des signaux PWM. D'autres fonctionnalités robotiques, telles que la régulation de vitesse ou l'évitement d'obstacles, ont également été mises en œuvre de façon modulaire.",
+                video: "public/video/linea-video.mp4"
+            },
+            
+                
+        ]
+    },
+    {
+        section: 'but1',
+        title: 'Pilomo',
         description: "Conception, fabrication et mise au point d'une carte électronique permettant la commande de 2 moteurs à courant continu, suivie du développement de programmes Arduino Nano en langage C pour réaliser différentes tâches robotiques.",
         technologies: 'Arduino IDE , Langage C,Proteus,Carte Arduino(Nano).',
         video: null,
@@ -26,15 +53,7 @@
         ]
     },
     
-    {
-        section: 'but1',
-        title: 'Maquettes Pneumatique',
-        description: 'Conception et simulation de systèmes pneumatiques automatisés utilisant la programmation Ladder.',
-        technologies: 'Programmation Ladder, Automates Programmables, Automate Schneider Electric, Pneumatique, et Contrôle de processus automatisés.',
-        video: 'public/video/maquettes.mp4',
-        link: null,
-        image: null,
-    },
+   
     {
         section: 'but1',
         title: 'Calcul de résistance en C++',

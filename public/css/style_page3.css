@@ -164,16 +164,18 @@ nav .navbar ul li a.active {
 .image-wrapper {
     display: flex;
     justify-content: center;
-    flex-direction: column; /* Centre le texte sous l'image */
-    align-items: center; /* Centre les éléments dans le wrapper */
+    align-items: center;
+    flex-wrap: wrap; /* Permet le retour à la ligne si trop d’images */
+    gap: 15px; /* Espace entre les images */
     margin: 15px 0;
 }
 
 .image-wrapper img {
-    max-width: 80%; /* Limite la largeur des images à 80% du conteneur */
-    height: auto; /* Conserve le ratio */
-    border-radius: 12px; /* Arrondit les bords des images */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre pour les images */
+    max-width: 200px; /* Largeur max fixe pour que plusieurs images tiennent sur une ligne */
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .image-wrapper p {

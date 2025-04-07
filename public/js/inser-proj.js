@@ -78,16 +78,19 @@ function insertProjects() {
             }
 
             // Ajout des images
-            if (project.image) {
+                    // Ajout des images (dans un seul image-wrapper pour tout le projet)
+            if (project.image && Array.isArray(project.image)) {
+                const imageWrapper = document.createElement('div');
+                imageWrapper.classList.add('image-wrapper');
+                
                 project.image.forEach(imgSrc => {
-                    const imageWrapper = document.createElement('div');
-                    imageWrapper.classList.add('image-wrapper');
                     const img = document.createElement('img');
                     img.setAttribute('src', imgSrc);
                     img.setAttribute('alt', project.title);
                     imageWrapper.appendChild(img);
-                    projectDetails.appendChild(imageWrapper);
                 });
+
+                projectDetails.appendChild(imageWrapper);
             }
 
             // Ajout des détails supplémentaires
@@ -102,12 +105,24 @@ function insertProjects() {
                     if (detail.image) {
                         const imageWrapper = document.createElement('div');
                         imageWrapper.classList.add('image-wrapper');
-                        const img = document.createElement('img');
-                        img.setAttribute('src', detail.image);
-                        img.setAttribute('alt', detail.title);
-                        imageWrapper.appendChild(img);
+                    
+                        if (Array.isArray(detail.image)) {
+                            detail.image.forEach(imgSrc => {
+                                const img = document.createElement('img');
+                                img.setAttribute('src', imgSrc);
+                                img.setAttribute('alt', detail.title);
+                                imageWrapper.appendChild(img);
+                            });
+                        } else {
+                            const img = document.createElement('img');
+                            img.setAttribute('src', detail.image);
+                            img.setAttribute('alt', detail.title);
+                            imageWrapper.appendChild(img);
+                        }
+                    
                         li.appendChild(imageWrapper);
                     }
+                    
 
                     if (detail.video) {
                         const videoWrapper = document.createElement('div');
