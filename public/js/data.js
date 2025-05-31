@@ -13,11 +13,6 @@
 
         pdf: 'public/Dossier/Dossier technique LINÉA Etienne Zana Romain Charles.pdf', // Chemin ou lien vers le PDF
 
-        pdf: null, // Chemin ou lien vers le PDF
-
-
-        pdf: null, // Chemin ou lien vers le PDF
-
         link: null, // Chemin ou lien
         details: [
             {
@@ -45,11 +40,6 @@
 
 
         pdf: 'public/Dossier/Dossier technique Etienne RUAULT & Zana DIAMOUTENE.pdf', // Chemin ou lien vers le PDF
-
-        pdf: 'public/Dossier/Projet PILOMO ZANA et ETIENNE_compressed.pdf', // Chemin ou lien vers le PDF
-
-
-        pdf: 'public/Dossier/Projet PILOMO ZANA et ETIENNE_compressed.pdf', // Chemin ou lien vers le PDF
 
         link: null, // Chemin ou lien
         details: [

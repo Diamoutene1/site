@@ -7,16 +7,16 @@ body {
     background: url('../image/image2.jpg') no-repeat center center fixed;
     background-size: cover;
     line-height: 1.6;
-    overflow-x: hidden; /* Empêcher le débordement horizontal */
+    overflow-x: hidden;
 }
 
 /* Style pour la navigation */
 nav {
-    background: rgba(0, 0, 0, 0.8); /* Menu semi-transparent */
+    background: rgba(0, 0, 0, 0.8);
     padding: 15px 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée */
-    animation: slideDown 1s ease-out; /* Animation de la navigation */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    animation: slideDown 1s ease-out;
     position: fixed;
     width: 100%;
     top: 0;
@@ -28,11 +28,11 @@ nav .logo {
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
-    animation: fadeIn 2s ease-in; /* Animation du logo */
+    animation: fadeIn 2s ease-in;
 }
 
 nav .logo span {
-    color: #ffa500; /* Couleur d'accentuation pour le texte "folio" */
+    color: #ffa500;
 }
 
 nav .navbar ul {
@@ -44,7 +44,7 @@ nav .navbar ul {
 nav .navbar ul li {
     display: inline;
     margin: 0 20px;
-    animation: fadeIn 2s ease-in; /* Animation des éléments de la navbar */
+    animation: fadeIn 2s ease-in;
 }
 
 nav .navbar ul li a {
@@ -58,72 +58,49 @@ nav .navbar ul li a {
 
 nav .navbar ul li a:hover,
 nav .navbar ul li a.active {
-    background: #ff7b54; /* Couleur de survol et active */
+    background: #ff7b54;
     color: #ffffff;
 }
 
-
-
-/* Wrapper global pour la mise en page côté à côte */
+/* Wrapper global pour la mise en page côte à côte */
 .container-wrapper {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    margin-top: 80px; /* Ajuste l'espace sous la barre de navigation */
+    margin-top: 100px;
     padding: 0 30px;
-    align-items: flex-start; /* Aligne les sections en haut, sans forcer la même hauteur */
+    align-items: flex-start;
 }
 
-/* Container principal pour chaque section */
+/* Chaque container occupe 50% */
 .container {
-    max-width: 45%; /* Limite la largeur des containers */
-    background: rgba(0, 0, 0, 0.9); /* Fond plus sombre pour le texte */
+    flex: 1 1 50%;
+    background: rgba(0, 0, 0, 0.9);
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
     padding: 30px;
-    animation: fadeInUp 1.5s ease-out; /* Animation du container */
-    min-height: 400px; /* Hauteur minimale pour que les deux conteneurs aient une hauteur de base */
+    animation: fadeInUp 1.5s ease-out;
+    min-height: 400px;
+    box-sizing: border-box;
 }
 
-/* Styles pour le texte à propos */
-
-
-/* Container principal */
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 30px;
-    background: rgba(0, 0, 0, 0.9); /* Fond plus sombre pour le texte */
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    margin-top: 80px; /* Ajuster le margin-top pour laisser de l'espace pour la navigation fixe */
-    animation: fadeInUp 1.5s ease-out; /* Animation du container */
-}
-
-
-
-
+/* Styles spécifiques à la section À propos */
 .container h1 {
     font-size: 40px;
     margin-bottom: 20px;
     color: #ff7b54;
     text-align: center;
-    animation: fadeInUp 2s ease-out; /* Animation du titre */
+    animation: fadeInUp 2s ease-out;
 }
 
 .container p {
     font-size: 18px;
     margin-bottom: 15px;
     text-align: justify;
-    animation: fadeInUp 2s ease-out; /* Animation des paragraphes */
+    animation: fadeInUp 2s ease-out;
 }
-
 
 /* Section des expériences professionnelles */
-.experience {
-    margin-top: 40px;
-}
-
 .experience h2 {
     color: #ff7b54;
     font-size: 28px;
@@ -159,22 +136,19 @@ nav .navbar ul li a.active {
     color: #fff;
 }
 
-
-
-
-/* Style pour le footer */
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.8); /* Footer semi-transparent */
+    background: rgba(0, 0, 0, 0.8);
     color: #ffffff;
-    position: relative; 
+    position: relative;
     width: 100%;
     bottom: 0;
-    animation: fadeIn 3s ease-in; /* Animation du footer */
+    animation: fadeIn 3s ease-in;
 }
 
-/* Définition des animations */
+/* Animations */
 @keyframes slideDown {
     from {
         transform: translateY(-100%);
@@ -206,10 +180,8 @@ footer {
     }
 }
 
-/* Media Queries pour rendre le site responsive */
+/* Responsive */
 @media (max-width: 768px) {
-
-
     .container-wrapper {
         flex-direction: column;
         gap: 20px;
@@ -217,23 +189,17 @@ footer {
     }
 
     .container {
-        max-width: 100%; /* Occupe toute la largeur pour les petits écrans */
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 
-
-
     nav .navbar ul li {
-        display: block; /* Affiche les éléments de la navbar en bloc pour les petits écrans */
-        margin: 10px 0; /* Espacement vertical */
+        display: block;
+        margin: 10px 0;
     }
 
     nav .navbar ul li a {
-        font-size: 18px; /* Réduction de la taille de la police pour les petits écrans */
-
-
-        padding: 8px 12px; /* Ajustement du padding */
+        font-size: 18px;
+        padding: 8px 12px;
     }
 }
-
-    
-
