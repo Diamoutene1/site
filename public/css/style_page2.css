@@ -1,0 +1,230 @@
+/* Définition de la police principale */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background: url('../image/image2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    line-height: 1.6;
+    overflow-x: hidden; /* Empêcher le débordement horizontal */
+}
+
+/* Style pour la navigation */
+nav {
+    background: rgba(0, 0, 0, 0.8); /* Menu semi-transparent */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée */
+    animation: slideDown 1s ease-out; /* Animation de la navigation */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    animation: fadeIn 2s ease-in; /* Animation du logo */
+}
+
+nav .logo span {
+    color: #ffa500; /* Couleur d'accentuation pour le texte "folio" */
+}
+
+nav .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav .navbar ul li {
+    display: inline;
+    margin: 0 20px;
+    animation: fadeIn 2s ease-in; /* Animation des éléments de la navbar */
+}
+
+nav .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav .navbar ul li a:hover,
+nav .navbar ul li a.active {
+    background: #ff7b54; /* Couleur de survol et active */
+    color: #ffffff;
+}
+
+
+/* Wrapper global pour la mise en page côté à côte */
+.container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 80px; /* Ajuste l'espace sous la barre de navigation */
+    padding: 0 30px;
+    align-items: flex-start; /* Aligne les sections en haut, sans forcer la même hauteur */
+}
+
+/* Container principal pour chaque section */
+.container {
+    max-width: 45%; /* Limite la largeur des containers */
+    background: rgba(0, 0, 0, 0.9); /* Fond plus sombre pour le texte */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    animation: fadeInUp 1.5s ease-out; /* Animation du container */
+    min-height: 400px; /* Hauteur minimale pour que les deux conteneurs aient une hauteur de base */
+}
+
+/* Styles pour le texte à propos */
+
+/* Container principal */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.9); /* Fond plus sombre pour le texte */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    margin-top: 80px; /* Ajuster le margin-top pour laisser de l'espace pour la navigation fixe */
+    animation: fadeInUp 1.5s ease-out; /* Animation du container */
+}
+
+
+.container h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #ff7b54;
+    text-align: center;
+    animation: fadeInUp 2s ease-out; /* Animation du titre */
+}
+
+.container p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: justify;
+    animation: fadeInUp 2s ease-out; /* Animation des paragraphes */
+}
+
+/* Section des expériences professionnelles */
+.experience {
+    margin-top: 40px;
+}
+
+.experience h2 {
+    color: #ff7b54;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.exp-block {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #ff7b54;
+}
+
+.exp-block h3 {
+    font-size: 20px;
+    color: #ffa500;
+    margin-bottom: 5px;
+}
+
+.exp-block p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.exp-block ul {
+    padding-left: 20px;
+}
+
+.exp-block ul li {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #fff;
+}
+
+
+
+/* Style pour le footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Footer semi-transparent */
+    color: #ffffff;
+    position: relative; 
+    width: 100%;
+    bottom: 0;
+    animation: fadeIn 3s ease-in; /* Animation du footer */
+}
+
+/* Définition des animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 768px) {
+
+    .container-wrapper {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .container {
+        max-width: 100%; /* Occupe toute la largeur pour les petits écrans */
+    }
+
+
+
+    nav .navbar ul li {
+        display: block; /* Affiche les éléments de la navbar en bloc pour les petits écrans */
+        margin: 10px 0; /* Espacement vertical */
+    }
+
+    nav .navbar ul li a {
+        font-size: 18px; /* Réduction de la taille de la police pour les petits écrans */
+
+        padding: 8px 12px; /* Ajustement du padding */
+    }
+}
+
+    
