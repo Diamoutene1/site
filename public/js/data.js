@@ -9,11 +9,15 @@
       
         video: null,
         image: ['public/image/linea1.jpg', 'public/image/linea2.jpg', 'public/image/linea3.jpg', 'public/image/linea4.jpg', 'public/image/linea5.jpg'],
+<<<<<<< HEAD
 
         pdf: 'public/Dossier/Dossier technique LINÉA Etienne Zana Romain Charles.pdf', // Chemin ou lien vers le PDF
 
         pdf: null, // Chemin ou lien vers le PDF
 
+=======
+        pdf: null, // Chemin ou lien vers le PDF
+>>>>>>> 1fe21adc4af827cf6bc0bbda689313e2156e4544
         link: null, // Chemin ou lien
         details: [
             {
@@ -38,11 +42,15 @@
         technologies: 'Arduino IDE , Langage C,Proteus,Carte Arduino(Nano).',
         video: null,
         image: ['public/image/pilomo-image1.png', 'public/image/pilomo-image2.png'],
+<<<<<<< HEAD
 
         pdf: 'public/Dossier/Dossier technique Etienne RUAULT & Zana DIAMOUTENE.pdf', // Chemin ou lien vers le PDF
 
         pdf: 'public/Dossier/Projet PILOMO ZANA et ETIENNE_compressed.pdf', // Chemin ou lien vers le PDF
 
+=======
+        pdf: 'public/Dossier/Projet PILOMO ZANA et ETIENNE_compressed.pdf', // Chemin ou lien vers le PDF
+>>>>>>> 1fe21adc4af827cf6bc0bbda689313e2156e4544
         link: null, // Chemin ou lien
         details: [
             {

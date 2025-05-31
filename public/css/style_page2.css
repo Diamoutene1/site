@@ -62,6 +62,7 @@ nav .navbar ul li a.active {
     color: #ffffff;
 }
 
+<<<<<<< HEAD
 
 /* Wrapper global pour la mise en page côté à côte */
 .container-wrapper {
@@ -86,6 +87,8 @@ nav .navbar ul li a.active {
 
 /* Styles pour le texte à propos */
 
+=======
+>>>>>>> 1fe21adc4af827cf6bc0bbda689313e2156e4544
 /* Container principal */
 .container {
     max-width: 900px;
@@ -98,7 +101,10 @@ nav .navbar ul li a.active {
     animation: fadeInUp 1.5s ease-out; /* Animation du container */
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1fe21adc4af827cf6bc0bbda689313e2156e4544
 .container h1 {
     font-size: 40px;
     margin-bottom: 20px;
@@ -114,6 +120,7 @@ nav .navbar ul li a.active {
     animation: fadeInUp 2s ease-out; /* Animation des paragraphes */
 }
 
+<<<<<<< HEAD
 /* Section des expériences professionnelles */
 .experience {
     margin-top: 40px;
@@ -156,6 +163,8 @@ nav .navbar ul li a.active {
 
 
 
+=======
+>>>>>>> 1fe21adc4af827cf6bc0bbda689313e2156e4544
 /* Style pour le footer */
 footer {
     text-align: center;
@@ -202,6 +211,7 @@ footer {
 
 /* Media Queries pour rendre le site responsive */
 @media (max-width: 768px) {
+<<<<<<< HEAD
 
     .container-wrapper {
         flex-direction: column;
@@ -215,6 +225,8 @@ footer {
 
 
 
+=======
+>>>>>>> 1fe21adc4af827cf6bc0bbda689313e2156e4544
     nav .navbar ul li {
         display: block; /* Affiche les éléments de la navbar en bloc pour les petits écrans */
         margin: 10px 0; /* Espacement vertical */
@@ -222,9 +234,15 @@ footer {
 
     nav .navbar ul li a {
         font-size: 18px; /* Réduction de la taille de la police pour les petits écrans */
+<<<<<<< HEAD
 
         padding: 8px 12px; /* Ajustement du padding */
     }
 }
 
     
+=======
+        padding: 8px 12px; /* Ajustement du padding */}
+
+    }
+>>>>>>> 1fe21adc4af827cf6bc0bbda689313e2156e4544

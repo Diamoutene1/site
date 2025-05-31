@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Corps principal */
 body {
     background: url('../image/image1.jpg') no-repeat center center fixed;
@@ -249,3 +250,256 @@ footer a:hover {
         margin: 10px 0;
     }
 }
+=======
+/* Corps principal */
+body {
+    background: url('../image/image1.jpg') no-repeat center center fixed;
+    background-size: cover; /* S'assurer que l'image couvre tout l'écran */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+    color: #fff;
+    font-family: 'Arial', sans-serif; /* Police plus moderne */
+    max-width: 100%;
+    overflow-x: hidden;  /* Évite le défilement horizontal */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Overlay sombre pour améliorer la lisibilité */
+    z-index: 1;
+}
+
+nav, .container, footer {
+    position: relative;
+    z-index: 2;
+}
+
+/* Logo et Navigation */
+.logo {
+    font-size: 2em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    animation: glow 1.5s infinite alternate;
+}
+
+.logo span {
+    color: #ffa500; /* Couleur d'accentuation */
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: color 0.5s;
+}
+
+.navbar a:hover, .navbar .active {
+    color: #ffa500; /* Couleur d'accentuation */
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.text {
+    max-width: 50%;
+}
+
+.text h1 {
+    font-size: 3em;
+    animation: fadeIn 2s ease-out, slideIn 3s ease-in-out; /* Animation pour le titre */
+}
+
+.text h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+    color: #ffa500; /* Couleur d'accentuation */
+}
+
+.changes-text {
+    display: inline-block; /* Garde le texte dans une seule ligne */
+    padding: 5px 10px;
+    background: rgba(255, 165, 0, 0.1); /* Arrière-plan léger */
+    border: 2px solid #ffa500; /* Bordure orange pour encadrer l'animation */
+    border-radius: 5px; /* Coins arrondis */
+    min-width: 300px; /* Largeur minimale pour éviter les sauts visuels */
+    text-align: center; /* Centrer le texte */
+    color: #ffa500;
+    font-weight: bold;
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    transition: opacity 0.5s ease-in-out; /* Transition fluide de l'opacité */
+}
+
+/* Animation des changements de texte */
+@keyframes fade-in-out {
+    0%, 100% {
+        opacity: 0; /* Commence et finit avec une opacité nulle */
+    }
+    20%, 80% {
+        opacity: 1; /* Texte visible pendant le milieu de l'animation */
+    }
+}
+
+/* Bouton */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ffa500;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #ff8c00;
+    transform: scale(1.05);
+}
+
+/* Image de présentation */
+.image-container .cercle {
+    width: 200px;
+    height: 200px;
+    background: #ffa500;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.image-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #ffa500;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ffa500, 0 0 20px #ffa500;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ffa500, 0 0 30px #ffa500;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 2.5em;
+    }
+
+    .text h2 {
+        font-size: 1.5em;
+    }
+
+    .image-container .cercle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text h1 {
+        font-size: 2em;
+    }
+
+    .text h2 {
+        font-size: 1.2em;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+>>>>>>> 1fe21adc4af827cf6bc0bbda689313e2156e4544
