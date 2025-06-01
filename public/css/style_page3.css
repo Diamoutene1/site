@@ -327,3 +327,72 @@ footer p {
     background-color: #004d40; /* Couleur de fond lors du survol */
 }
 
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 768px) {
+    nav .navbar ul {
+        flex-direction: column; /* Affiche les éléments de la navbar en colonne pour les petits écrans */
+        align-items: center; /* Centre les éléments de la navbar */
+    }
+
+    nav .navbar ul li {
+        margin: 10px 0; /* Espacement vertical */
+    }
+
+    .container {
+        padding: 20px; /* Réduction du padding pour les petits écrans */
+    }
+
+    .container h1 {
+        font-size: 30px; /* Réduction de la taille du titre */
+    }
+
+    .projects-section h2 {
+        font-size: 28px; /* Réduction de la taille du sous-titre */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Affiche les projets en une seule colonne */
+    }
+
+    .project-item {
+        padding: 15px; /* Réduction du padding pour les éléments de projet */
+    }
+
+    .project-item h3 {
+        font-size: 22px; /* Réduction de la taille du titre de projet */
+    }
+
+    .project-item p {
+        font-size: 16px; /* Réduction de la taille du texte */
+    }
+
+    video {
+        max-width: 80%; /* Limite la largeur des vidéos à 80% du conteneur */
+    }
+}
+
+@media (max-width: 480px) {
+    nav .logo {
+        font-size: 24px; /* Réduction de la taille du logo */
+    }
+
+    .container h1 {
+        font-size: 24px; /* Réduction supplémentaire de la taille du titre */
+    }
+
+    .projects-section h2 {
+        font-size: 24px; /* Réduction supplémentaire de la taille du sous-titre */
+    }
+
+    .project-item h3 {
+        font-size: 20px; /* Réduction supplémentaire de la taille du titre de projet */
+    }
+
+    .project-item p {
+        font-size: 14px; /* Réduction supplémentaire de la taille du texte */
+    }
+
+    .details-button {
+        font-size: 14px; /* Réduction de la taille du bouton */
+    }
+} 

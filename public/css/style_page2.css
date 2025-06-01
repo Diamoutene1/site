@@ -142,7 +142,7 @@ footer {
     padding: 20px;
     background: rgba(0, 0, 0, 0.8);
     color: #ffffff;
-    
+    position: relative;
     width: 100%;
     bottom: 0;
     animation: fadeIn 3s ease-in;
