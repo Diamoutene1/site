@@ -142,7 +142,7 @@ footer {
     padding: 20px;
     background: rgba(0, 0, 0, 0.8);
     color: #ffffff;
-    position: relative;
+    
     width: 100%;
     bottom: 0;
     animation: fadeIn 3s ease-in;
@@ -180,26 +180,3 @@ footer {
     }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .container-wrapper {
-        flex-direction: column;
-        gap: 20px;
-        padding: 0 15px;
-    }
-
-    .container {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    nav .navbar ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    nav .navbar ul li a {
-        font-size: 18px;
-        padding: 8px 12px;
-    }
-}
