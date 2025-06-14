@@ -3,9 +3,42 @@
 
     {
         section: 'but1',
+        title: 'Feux de carrefour tricolore',
+        description: "Ce projet consiste à réaliser un prototype de feux tricolores à LEDs gérés par un automate Schneider Electric Zélio SR3B261BD. Une carte de détection optionnelle a été développée pour détecter la présence d’un véhicule à une distance comprise entre 50 cm et 1 m, grâce au capteur infrarouge GP2Y. Plusieurs programmes en langage FBD (Function Block Diagram) ont été réalisés pour piloter les feux selon différents scénarios de circulation.",
+        technologies: "Zélio, Automate Schneider Electric SR3B261BD, Langage FBD, Proteus,capteur GP2Y.",
+
+        video: null,
+        image: [
+            'public/image/carte-feux1.jpeg',
+            'public/image/carte-feux2.jpeg',
+            'public/image/carte-option.jpeg',
+             'public/image/carte-feux3.jpg',
+            
+        ],
+
+        pdf: 'public/Dossier/Dossier technique -SAE -Feu.pdf',
+
+        link: null,
+
+        details: [
+            {
+                title: "Fabrication des Cartes",
+                description: "Deux cartes électroniques ont été développées : une pour la gestion des feux (LEDs rouge, orange, verte), et une seconde optionnelle pour la détection de présence via le capteur GP2Y. Cette dernière inclut un régulateur de tension, des comparateurs LM358, une porte logique 74HCT08, et un circuit d'adaptation de niveau à base de MOSFETs. Le circuit imprime (typon) a été conçu sous Proteus puis gravé et monté manuellement."
+            },
+            {
+                title: "Programmation et Simulation",
+                description: "Les programmes ont été développés en langage FBD via le logiciel Zelio Soft pour simuler les scénarios de feux : mode normal, passage piéton, détection de véhicule. Le capteur permet de déclencher automatiquement la phase verte selon la détection. Le tout a été testé sur maquette avec visualisation via LEDs.",
+                video: null,
+            }
+        ]
+    },
+
+
+    {
+        section: 'but1',
         title: 'Linéa (robot suiveur de ligne)',
         description: "Le projet inclut la fabrication d’une carte de commande pour deux moteurs à courant continu, ainsi qu’une carte de détection optique simulant les yeux du robot pour le repérage de la ligne. Plusieurs programmes en langage C ont été développés pour assurer le suivi de ligne et exécuter diverses tâches robotiques.",
-        technologies: "PIC18F2520, MPLAB X IDE, Langage C, Proteus, Microchip.",
+        technologies: " Microchip PIC18F2520, MPLAB X IDE, Langage C, Proteus,Capteur GP2Y et CNY70.",
       
         video: null,
         image: ['public/image/linea1.jpg', 'public/image/linea2.jpg', 'public/image/linea3.jpg', 'public/image/linea4.jpg', 'public/image/linea5.jpg'],
@@ -34,7 +67,7 @@
         section: 'but1',
         title: 'Pilomo',
         description: "Conception, fabrication et mise au point d'une carte électronique permettant la commande de 2 moteurs à courant continu, suivie du développement de programmes Arduino Nano en langage C pour réaliser différentes tâches robotiques.",
-        technologies: 'Arduino IDE , Langage C,Proteus,Carte Arduino(Nano).',
+        technologies: 'Arduino IDE , Langage C,Proteus,Carte Arduino(Nano),Capteur GP2Y.',
         video: null,
         image: ['public/image/pilomo-image1.png', 'public/image/pilomo-image2.png'],
 
