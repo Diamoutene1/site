@@ -3,8 +3,8 @@
 
     {
         section: 'but1',
-        title: 'Feux de carrefour tricolore',
-        description: "Ce projet consiste à réaliser un prototype de feux tricolores à LEDs gérés par un automate Schneider Electric Zélio SR3B261BD. Une carte de détection optionnelle a été développée pour détecter la présence d’un véhicule à une distance comprise entre 50 cm et 1 m, grâce au capteur infrarouge GP2Y. Plusieurs programmes en langage FBD (Function Block Diagram) ont été réalisés pour piloter les feux selon différents scénarios de circulation.",
+        title: ' Feu de circulation ',
+        description: "Ce projet consiste à réaliser un prototype de  Feu de circulation à LEDs gérés par un automate Schneider Electric Zélio SR3B261BD. Une carte de détection optionnelle a été développée pour détecter la présence d’un véhicule à une distance comprise entre 50 cm et 1 m, grâce au capteur infrarouge GP2Y. Plusieurs programmes en langage FBD (Function Block Diagram) ont été réalisés pour piloter les feux selon différents scénarios de circulation.",
         technologies: "Zélio, Automate Schneider Electric SR3B261BD, Langage FBD, Proteus,capteur GP2Y.",
 
         video: null,
