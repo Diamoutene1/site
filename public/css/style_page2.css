@@ -135,6 +135,20 @@ nav .navbar ul li a.active {
     margin-bottom: 6px;
     color: #fff;
 }
+.exp-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.exp-logo {
+    width: 100px; /* Avant : 50px */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
 
 /* Footer */
 footer {
